@@ -1,0 +1,533 @@
+CRITICAL - 2022-07-10 08:34:39 --> date_default_timezone_set(): Timezone ID 'Rwanda/Kigali' is invalid
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'date_default_ti...', 'C:\\xampp\\htdocs...', 184)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(184): date_default_timezone_set('Rwanda/Kigali')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-07-10 08:34:44 --> date_default_timezone_set(): Timezone ID 'Rwanda/Kigali' is invalid
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'date_default_ti...', 'C:\\xampp\\htdocs...', 184)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(184): date_default_timezone_set('Rwanda/Kigali')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-07-10 01:44:40 --> Undefined variable $login_title
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\auth\login_admin.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 8)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/login_admi...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(23): view('auth/login_admi...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->loginFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 01:45:20 --> Undefined variable $login_title
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\auth\login_admin.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 8)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/login_admi...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(23): view('auth/login_admi...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->loginFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 03:23:34 --> Call to undefined function set_value()
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/register_f...', Array, true)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(47): view('auth/register_f...', Array)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->registerFarmer()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-07-10 03:25:25 --> Call to undefined function set_value()
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/register_f...', Array, true)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(47): view('auth/register_f...', Array)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->registerFarmer()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-07-10 03:48:11 --> syntax error, unexpected single-quoted string "matches", expecting "]"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-10 03:48:59 --> syntax error, unexpected single-quoted string "matches", expecting "]"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-10 03:55:12 --> Invalid file: index.php/farmer/register.php
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php/farme...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('index.php/farme...', Array, true)
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(152): view('index.php/farme...', Array)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-10 03:56:47 --> Undefined variable $page_title
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\auth\register_farmer.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 17)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/register_f...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(152): view('auth/register_f...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 03:58:38 --> Undefined variable $page_title
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\auth\register_farmer.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 17)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/register_f...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(159): view('auth/register_f...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 04:04:54 --> syntax error, unexpected token ";"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/register_f...', Array, true)
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(45): view('auth/register_f...', Array)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->registerFarmer()
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-10 04:06:19 --> Undefined variable $page_title
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\auth\register_farmer.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 17)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/register_f...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(153): view('auth/register_f...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 04:07:45 --> Call to undefined function displayError()
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/register_f...', Array, true)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(153): view('auth/register_f...', Array)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-07-10 04:13:36 --> Undefined variable $login_title
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\auth\login_farmer.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 8)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/login_farm...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(32): view('auth/login_farm...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->loginAdmin()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 04:14:11 --> Undefined variable $login_title
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\auth\login_farmer.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 8)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/login_farm...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(32): view('auth/login_farm...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->loginAdmin()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 04:14:53 --> Call to undefined function displayError()
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/register_f...', Array, true)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(153): view('auth/register_f...', Array)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-07-10 04:28:20 --> syntax error, unexpected identifier "farmer", expecting "]"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('AuthController/...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('AuthController/...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-10 05:38:00 --> syntax error, unexpected token ";", expecting "]"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-10 05:46:23 --> syntax error, unexpected token ";"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-10 05:50:40 --> Unclosed '{' on line 7
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-10 06:20:53 --> view(): Argument #3 ($options) must be of type array, string given, called in C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php on line 151
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(151): view('auth/register_f...', Array, 'data')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-10 06:21:47 --> syntax error, unexpected token "=>", expecting ")"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('AuthController/...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('AuthController/...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-10 06:22:37 --> Undefined variable $data
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 151)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-10 06:23:12 --> Undefined variable $data
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 151)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-10 06:23:36 --> Undefined variable $page_title
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\auth\register_farmer.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 17)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/register_f...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(158): view('auth/register_f...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 06:24:03 --> Undefined variable $page_title
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\auth\register_farmer.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 17)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/register_f...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(158): view('auth/register_f...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 06:24:31 --> Undefined variable $page_title
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\auth\register_farmer.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 17)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/register_f...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(158): view('auth/register_f...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 06:25:54 --> Undefined variable $page_title
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\auth\register_farmer.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 17)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/register_f...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(158): view('auth/register_f...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 06:29:41 --> Invalid file: auth/farmer.php
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/farmer.php')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/farmer', Array, true)
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(103): view('auth/farmer', Array)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->registerFarmer()
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-10 06:29:48 --> Invalid file: auth/farmer.php
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/farmer.php')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/farmer', Array, true)
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(103): view('auth/farmer', Array)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->registerFarmer()
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-10 07:04:09 --> Undefined variable $login_title
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\auth\login_admin.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 8)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/login_admi...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(20): view('auth/login_admi...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->loginFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 07:09:57 --> Undefined variable $login_title
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\auth\login_admin.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 8)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('auth/login_admi...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(20): view('auth/login_admi...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->loginFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 07:42:31 --> syntax error, unexpected token "}", expecting ";"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-10 07:42:51 --> syntax error, unexpected token "}", expecting "," or ";"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-10 07:45:19 --> Invalid file: index.php/farmer/login.php
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php/farme...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('index.php/farme...', Array, true)
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(193): view('index.php/farme...', Array)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->checkFarmer()
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-10 08:03:08 --> syntax error, unexpected token "}", expecting identifier or variable or "{" or "$"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-10 08:03:10 --> syntax error, unexpected token "}", expecting identifier or variable or "{" or "$"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-10 08:10:17 --> Class "App\Models\UserModel" not found
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->checkFarmer()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-07-10 08:10:48 --> Call to undefined method CodeIgniter\HTTP\RedirectResponse::widthInput()
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->checkFarmer()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-07-10 09:44:23 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php on line 16
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(16): view('template/navbar', 'template/sideba...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->dashboardFarmer()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-10 09:46:42 --> syntax error, unexpected token ",", expecting ";"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-10 09:48:03 --> Undefined constant "App\Controllers\view"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->dashboardFarmer()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-07-10 10:11:28 --> Undefined variable $userInfo
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(24): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->dashboardFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 10:11:48 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(24): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->dashboardFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 10:14:17 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(24): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->dashboardFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 10:17:28 --> Undefined variable $farmerInfo
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(24): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->dashboardFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 10:18:39 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(24): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->dashboardFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 10:18:44 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(24): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->dashboardFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 10:18:47 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(24): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->dashboardFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 10:18:49 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(24): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->dashboardFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 10:18:52 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(24): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->dashboardFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 10:33:57 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(24): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->dashboardFarmer()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 15:23:14 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\main\farmer_profile.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/farmer_pro...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(44): view('main/farmer_pro...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->farmerProfile()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 15:39:08 --> Undefined variable $page_title
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 19)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(24): view('template/navbar')
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->farmerDashboard()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-10 15:39:52 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(24): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->farmerDashboard()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
