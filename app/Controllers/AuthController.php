@@ -203,6 +203,10 @@ class AuthController extends BaseController {
             if(!$checkPassword) {
                 session()->setFlashdata('fail', "Invalid password!");
                 return redirect()->to('farmer/login')->withInput();
+
+            } else if($user['status']!=1) {
+                session()->setFlashdata('fail', "Your account is not approved!");
+                return redirect()->to('farmer/login')->withInput();
             } else {
                 $farmer_id = $user['farmer_id'];
                 session()->set('activeUser', $farmer_id);

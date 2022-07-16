@@ -1,0 +1,391 @@
+CRITICAL - 2022-07-15 02:16:22 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, array given, called in C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php on line 298
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(298): CodeIgniter\HTTP\RedirectResponse->to('admin/profile', Array)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->changepass()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-15 02:18:55 --> Undefined variable $page_title
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 19)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(310): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->changepass()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-15 05:18:41 --> syntax error, unexpected token "foreach"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(87): view('main/admin_dash', Array)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-15 05:19:22 --> syntax error, unexpected token "foreach"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(87): view('main/admin_dash', Array)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-15 05:21:00 --> syntax error, unexpected token "foreach"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(87): view('main/admin_dash', Array)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-15 05:32:38 --> syntax error, unexpected token "foreach"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(88): view('main/admin_dash', Array)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-15 05:38:30 --> Cannot access offset of type string on string
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(88): view('main/admin_dash', Array)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-07-15 05:39:00 --> Cannot access offset of type string on string
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(88): view('main/admin_dash', Array)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-07-15 05:39:21 --> Attempt to read property "title" on string
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\main\admin_dash.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 26)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(88): view('main/admin_dash', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-15 05:40:02 --> Attempt to read property "title" on string
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\main\admin_dash.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 26)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(88): view('main/admin_dash', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-15 05:40:54 --> syntax error, unexpected token "=>"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-15 05:43:56 --> syntax error, unexpected token "endforeach", expecting end of file
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(82): view('main/admin_dash', Array)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-15 05:48:23 --> syntax error, unexpected token "foreach"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(86): view('main/admin_dash', Array)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-15 05:49:00 --> Cannot access offset of type string on string
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(86): view('main/admin_dash', Array)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-07-15 05:49:35 --> Cannot access offset of type string on string
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(86): view('main/admin_dash', Array)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-07-15 05:50:18 --> Cannot access offset of type string on string
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(86): view('main/admin_dash', Array)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-07-15 05:50:38 --> Attempt to read property "title" on string
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\main\admin_dash.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 26)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(86): view('main/admin_dash', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-15 05:53:00 --> Cannot access offset of type string on string
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(86): view('main/admin_dash', Array)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-07-15 05:54:24 --> Attempt to read property "title" on string
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\main\admin_dash.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 26)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(86): view('main/admin_dash', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-15 05:54:41 --> Attempt to read property "admins_num" on array
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\main\admin_dash.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 24)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(86): view('main/admin_dash', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-15 05:55:26 --> Cannot access offset of type string on string
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(86): view('main/admin_dash', Array)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-07-15 05:55:44 --> Cannot access offset of type string on string
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(86): view('main/admin_dash', Array)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-07-15 05:56:32 --> Cannot access offset of type string on string
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(82): view('main/admin_dash', Array)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-07-15 05:59:57 --> Array to string conversion
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\main\admin_dash.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 28)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_dash', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(82): view('main/admin_dash', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-15 06:44:04 --> Undefined variable $adminData
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 54)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\CerealController.php(23): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\CerealController->cerealRegister()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CerealController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-15 06:45:49 --> Undefined variable $breadcrumb
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\pages\register_cereal.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 13)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/register_...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\CerealController.php(30): view('pages/register_...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\CerealController->cerealRegister()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CerealController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-15 07:30:16 --> syntax error, unexpected integer "10", expecting "]"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-07-15 08:43:53 --> Unknown column 'cereal_price' in 'field list'
+CRITICAL - 2022-07-15 08:43:53 --> Unknown column 'cereal_price' in 'field list'
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ce...', 0)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ce...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ce...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ce...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\CerealController.php(136): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\CerealController->cerealSave()
+#9 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CerealController))
+#10 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-07-15 13:17:09 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\CerealController.php(204): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 204)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\CerealController->cerealUpdate()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CerealController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-15 13:19:41 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\CerealController.php(204): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 204)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\CerealController->cerealUpdate()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CerealController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-15 17:04:46 --> syntax error, unexpected token ";", expecting ")"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-07-15 17:23:15 --> required] is not a valid rule.
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Validation\Validation.php(300): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('required]')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('cereal_name', 'cereal_name', 'Rice', Array, Array)
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\CerealController.php(52): CodeIgniter\Controller->validate(Array)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\CerealController->cerealSave()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CerealController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-07-15 17:58:01 --> Call to undefined method App\Models\AdminModel::count
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(66): CodeIgniter\Model->__call('count', Array)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-15 17:58:40 --> Undefined property: App\Controllers\DashController::$db
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 66)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-15 17:59:55 --> Undefined property: App\Controllers\DashController::$db
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 66)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-15 18:03:15 --> Call to a member function countAllResults() on array
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-07-15 18:03:28 --> Call to a member function count() on array
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-07-15 18:03:48 --> Call to a member function num_rows() on array
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-07-15 18:41:55 --> Undefined variable $farmers
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\pages\view_farmers.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/view_farm...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\UserController.php(34): view('pages/view_farm...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\UserController->index()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-15 18:42:39 --> Undefined array key "admin_id"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\pages\view_farmers.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 71)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/view_farm...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\UserController.php(34): view('pages/view_farm...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\UserController->index()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-15 19:00:04 --> syntax error, unexpected token "if", expecting ")"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-07-15 19:00:44 --> There is no data to update.
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\UserController.php(71): CodeIgniter\Model->update('6', Array)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\UserController->disable('6')
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}

@@ -14,7 +14,7 @@ class AdminController extends BaseController {
 
     public function adminRegistration() {
 
-        $adminModel = new  \App\Models\AdminModel();
+        $adminModel = new AdminModel();
         $activeAdminId= session()->get('activeAdmin');
         $adminData = $adminModel->find($activeAdminId);
 
@@ -34,7 +34,7 @@ class AdminController extends BaseController {
 
     public function adminSave() {
 
-        $adminModel = new  \App\Models\AdminModel();
+        $adminModel = new AdminModel();
         $activeAdminId= session()->get('activeAdmin');
         $adminData = $adminModel->find($activeAdminId);
 
@@ -243,39 +243,76 @@ class AdminController extends BaseController {
         $adminModel = new AdminModel();
         $data = ['status'   => '1'];
         $adminModel->update($id, $data); 
-        return $this->response->redirect(site_url('/admin/all'));
+        return $this->response->redirect(site_url('admin/all'));
     }
 
     public function disable($id = null) {
         $adminModel = new AdminModel();
         $data = ['status'   => '0'];
         $adminModel->update($id, $data); 
-        return $this->response->redirect(site_url('/admin/all'));
+        return $this->response->redirect(site_url('admin/all'));
     }
 
 
     public function changepass() {
         $adminModel = new AdminModel();
-        $id = $this->request->getVar('admin_id');
+        $id = session()->get('activeAdmin');
 
-        $data = [
-            'firstname' => $this->request->getVar('firstname'),
-            'lastname'  => $this->request->getVar('lastname'),
-            'province'  => $this->request->getVar('province'),
-            'district'  => $this->request->getVar('district'),
-            'sector'    => $this->request->getVar('sector'),
-            'cell'      => $this->request->getVar('cell'),
-            'village'   => $this->request->getVar('village'),
-            'gender'    => $this->request->getVar('gender'),
-            'telephone' => $this->request->getVar('telephone'),
-            'password'  => $this->request->getVar('password'),
-            'admin_role'=> $this->request->getVar('admin_role'),
-            'status'    => $this->request->getVar('status')
-        ];
+        $current  = $this->request->getVar('current');
+        $password = $this->request->getVar('password');
+        
+        $valid_current_ = $this->validate([
+            'current' => [
+                'rules' => 'required|min_length[5]|max_length[20]',
+                'errors'=> [
+                    'required' => 'Current password is required!'
+                ]
+            ]
+        ]);
 
-        $adminModel->update($id, $data);
-        return $this->response->redirect(site_url('/admin/all'));
+        $valid_new_pass = $this->validate([
+            'password'=> [
+                'rules' => 'required|min_length[5]|max_length[20]',
+                'errors'=> [
+                    'required' => 'Password is required!',
+                    'min_length' => 'Password must have at least 5 in length!',
+                    'max_length' => 'Password must have less than 20 in length!'
+                ]
+            ],
 
+            'cpassword'=> [
+                'rules' => 'required|min_length[5]|max_length[20]|matches[password]',
+                'errors'=> [
+                    'required' => 'You must confirm password!',
+                    'min_length' => 'Confirm Password must have at least 5 in length!',
+                    'max_length' => 'Confirm Password must have less than 15 in length!',
+                    'matches' => "Confirm Password does not match to password!"
+                ]
+            ],
+        ]);
+
+        $data = ['password'=> Hashing::make($password)];
+
+        $admin = $adminModel->where('admin_id', $id)->first();
+        $checkPassword = Hashing::checkPassword($current, $admin['password']);
+
+        if(!$valid_current_) {
+            session()->setFlashdata('fail', "Please enter existing password!");
+            return redirect()->to('admin/profile')->withInput();
+        }
+
+        if(!$valid_new_pass) {
+            session()->setFlashdata('fail', "Password is neither comfirmed well nor short!");
+            return redirect()->to('admin/profile')->withInput();
+        }
+
+        if(!$checkPassword) {
+            session()->setFlashdata('fail', "Entered password does not exist!");
+            return redirect()->to('admin/profile')->withInput();
+        } else {
+            $adminModel->update($id, $data);
+            return $this->response->redirect(site_url('admin/dashboard'));
+        }
     }
 
 

@@ -57,6 +57,7 @@ $routes->group('admin', ['filter'=>'adminNoAuth'], function ($routes){
 $routes->group('farmer', ['filter'=>'farmerAuth'], function ($routes){
     $routes->get('dashboard', 'DashController::farmerDashboard');
     $routes->get('profile',   'DashController::farmerProfile'); 
+    $routes->post('change-pass', 'UserController::changepass');
 });
 
 $routes->group('admin', ['filter'=>'adminAuth'], function ($routes){
@@ -70,14 +71,37 @@ $routes->group('admin', ['filter'=>'adminAuth'], function ($routes){
     //$routes->get('delete/(:num)', 'AdminController::delete/$1');
     $routes->get('enable/(:num)',  'AdminController::enable/$1');
     $routes->get('disable/(:num)', 'AdminController::disable/$1');
-    
+    $routes->post('change-pass', 'AdminController::changepass');
 });
 
+$routes->group('cereal', ['filter'=>'adminAuth'], function ($routes){
+    $routes->get('register', 'CerealController::cerealRegister');
+    $routes->post('save', 'CerealController::cerealSave');
+    $routes->get('all',  'CerealController::cerealViewAll');
+    $routes->get('edit/(:num)', 'CerealController::cerealView/$1');
+    $routes->post('update/(:num)', 'CerealController::cerealUpdate/$1');
+    $routes->get('delete/(:num)', 'CerealController::cerealDelete/$1');
+});
 
-//$routes->get('/admins', 'AdminController::index');
-//$routes->get('admin/(:num)', 'AdminController::adminById/$1');
-//$routes->get('admin/(:slug)', 'AdminController::adminBySlug/$1');
-//$routes->get('admin/login', 'AuthController::loginAdmin');
+// Under farmer group but managed at admin side:Agronomist
+$routes->group('farmer', ['filter'=>'adminAuth'], function ($routes){
+    $routes->get('active', 'UserController::index');
+    $routes->get('inactive', 'UserController::farmerInactive');
+    $routes->get('enable/(:num)', 'UserController::enable/$1');
+    $routes->get('disable/(:num)', 'UserController::disable/$1');
+
+});
+
+$routes->get('cereal/apply', 'CerealController::cerealApplication', ['filter'=>'farmerAuth']);
+$routes->post('cereal/appsub', 'CerealController::cerealAppSubmit', ['filter'=>'farmerAuth']);
+$routes->get('cereal/mine', 'CerealController::cerealAllApplied', ['filter'=>'farmerAuth']);
+
+$routes->get('harvest/register', 'HarvestController::harvestRegister', ['filter'=>'farmerAuth']);
+$routes->post('harvest/appsub', 'HarvestController::harvestSubmit', ['filter'=>'farmerAuth']);
+$routes->get('harvest/mine', 'HarvestController::harvestFarmerView', ['filter'=>'farmerAuth']);
+$routes->get('harvest/unchecked', 'HarvestController::harvestsUnchecked', ['filter'=>'adminAuth']);
+
+
 
 /*
  * --------------------------------------------------------------------

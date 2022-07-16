@@ -10,10 +10,6 @@
     <link href="<?= base_url('public/assets/vendor/fonts/circular-std/style.css'); ?>" rel="stylesheet">
     <link href="<?= base_url('public/assets/libs/css/style.css'); ?>" rel="stylesheet">
     <link href="<?= base_url('public/assets/vendor/fonts/fontawesome/css/fontawesome-all.css'); ?>" rel="stylesheet">
-    <link href="<?= base_url('public/assets/vendor/charts/chartist-bundle/chartist.css'); ?>" rel="stylesheet">
-    <link href="<?= base_url('public/assets/public/assets/vendor/charts/morris-bundle/morris.css'); ?>" rel="stylesheet">
-    <link href="<?= base_url('public/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css'); ?>" rel="stylesheet">
-    <link href="<?= base_url('public/assets/vendor/charts/c3charts/c3.css'); ?>" rel="stylesheet">
     <link href="<?= base_url('public/assets/vendor/fonts/flag-icon-css/flag-icon.min.css'); ?>" rel="stylesheet">
 
     <title><?= esc($page_title) ?></title>
@@ -48,7 +44,7 @@
                                 <div class="nav-user-info">
                                     <h5 class="mb-0 text-white nav-user-name">
                                         <?php 
-                                        if(session()->has('activeFarmer')) {
+                                        if(session()->has('activeUser')) {
                                             echo $userData['firstname']." ".$userData['lastname'];
                                         } if(session()->has('activeAdmin')) {
                                             echo $adminData['firstname']." ".$adminData['lastname'];
@@ -64,7 +60,7 @@
                                     ?>
                                 </div>
 
-                                <?php if(session()->has('activeFarmer')) { ?>
+                                <?php if(session()->has('activeUser')) { ?>
                                 <a class="dropdown-item" href="<?= base_url('farmer/profile') ?>"><i class="fas fa-user mr-2"></i>View Profile</a>
                                 
                                 <a class="dropdown-item" href="<?= base_url('farmer/logout') ?>"><i class="fas fa-power-off mr-2"></i>Logout</a>

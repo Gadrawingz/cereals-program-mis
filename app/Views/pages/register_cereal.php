@@ -28,7 +28,7 @@
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card">
                             <div class="card-body">
-                                <form method="POST" action="<?= base_url('CerealController/save') ?>">
+                                <form method="POST" action="<?= base_url('cereal/save') ?>">
                                     <?= csrf_field(); ?>
 
                                     <?php if(!empty(session()->getFlashdata('fail'))) : ?>
@@ -42,114 +42,149 @@
                                     <div class="form-row">
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
                                             <label for="cereal_name">Cereal Name</label>
-                                            <input type="text" class="form-control" id="cereal_name" name="cereal_name" value="<?= set_value('cereal_name') ?>">
+                                            <select name="cereal_name" class="form-control" id="cereal_name">
+                                
+                                                <?php
+                                                if(set_value('cereal_name')) {
+                                                ?>
+                                                <option value="<?= set_value('cereal_name') ?>"><?= set_value('cereal_name') ?></option>
+                                                <?php } else { ?>
+                                                <option value="">Select here</option>
+                                                <?php } ?>
+
+                                                <option value="Rice">Rice</option>
+                                                <option value="Oats">Oats</option>
+                                                <option value="Rye">Rye</option>
+                                                <option value="Sorghum">Sorghum</option>
+                                                <option value="Wheat">Wheat</option>
+                                                <option value="Corn">Corn(Maize)</option>
+                                                <option value="Quinoa">Quinoa</option>
+                                                <option value="Barley">Barley</option>
+                                                <option value="Buckwheat">Buckwheat</option>
+                                                <option value="Millet">Millet</option>
+                                            </select>
                                             <span class="errorful">
                                                 <?= isset($validation) ? displayError($validation, 'cereal_name') : '' ?>
                                             </span>
                                         </div>
                                         
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
-                                            <label for="lastname">Lastname</label>
+                                            <label for="cereal_type">Cereal Type</label>
                
-                                            <input type="text" class="form-control" id="lastname" name="lastname" value="<?= set_value('lastname') ?>">
+                                            <input type="text" class="form-control" id="cereal_type" name="cereal_type" value="<?= set_value('cereal_type') ?>">
                                             <span class="errorful">
-                                                <?= isset($validation) ? displayError($validation, 'lastname') : '' ?>
+                                                <?= isset($validation) ? displayError($validation, 'cereal_type') : '' ?>
                                             </span>
                                         </div>
                                     </div>
 
                                     <div class="form-row">
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
-                                            <label for="province">Province</label>
-                                            <select name="province" class="form-control" id="province">
-                                                <option value="<?= set_value('province') ?>">Select Province</option>
-                                                <option value="East">East</option>
-                                                <option value="West">West</option>
-                                                <option value="North">North</option>
-                                                <option value="South">South</option>
-                                                <option value="Kigali City">Kigali City</option>
-                                            </select>
+                                            <label for="cereal_price">Cereal Price in <b>Rwf</b></label>
+                                            <input type="number" class="form-control" id="cereal_price" name="cereal_price" value="<?= set_value('cereal_price') ?>">
                                             <span class="errorful">
-                                                <?= isset($validation) ? displayError($validation, 'province') : '' ?>
+                                                <?= isset($validation) ? displayError($validation, 'cereal_price') : '' ?>
                                             </span>
                                         </div>
                                         
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
-                                            <label for="district">District</label>
+                                            <label for="quantity">Quantity in <b>Kgs</b></label>
                
-                                            <select name="district" class="form-control" id="district">
-                                                <option value="<?= set_value('district') ?>">Select District</option>
-                                            </select>
-                                            <div class="errorful">
-                                                <?= isset($validation) ? displayError($validation, 'district') : '' ?>
-                                            </div>
+                                            <input type="number" class="form-control" id="quantity" name="quantity" value="<?= set_value('quantity') ?>">
+                                            <span class="errorful">
+                                                <?= isset($validation) ? displayError($validation, 'quantity') : '' ?>
+                                            </span>
                                         </div>
                                     </div>
 
+
                                     <div class="form-row">
-                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 mb-2">
-                                            <label for="sector">Sector</label>
-                                            <input type="text" class="form-control" id="sector" name="sector" value="<?= set_value('sector') ?>">
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
+                                            <label for="land_type">Land Type</label>
+                                            <select name="land_type" class="form-control" id="land_type">
+                                
+                                                <?php
+                                                if(set_value('land_type')) {
+                                                ?>
+                                                <option value="<?= set_value('land_type') ?>"><?= set_value('land_type') ?></option>
+                                                <?php } else { ?>
+                                                <option value="">Select here</option>
+                                                <?php } ?>
+
+                                                <option value="Forest Land">Forest Land</option>
+                                                <option value="Coastal Land">Coastal Land</option>
+                                                <option value="Grass Land">Grass Land</option>
+                                                <option value="Water Area">Water Area</option>
+                                                <option value="Farm Land">Farm Land</option>
+                                                <option value="Wet Land">Wet Land</option>
+                                                <option value="Desert Land">Desert Land</option>
+                                                <option value="Mountain">Mountain</option>
+                                                <option value="Urban Land">Urban Land</option>
+                                            </select>
                                             <span class="errorful">
-                                                <?= isset($validation) ? displayError($validation, 'sector') : '' ?>
+                                                <?= isset($validation) ? displayError($validation, 'land_type') : '' ?>
                                             </span>
                                         </div>
                                         
-                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 mb-2">
-                                            <label for="cell">Cell</label>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
+                                            <label for="season">Season</label>
                
-                                            <input type="text" class="form-control" id="cell" name="cell" value="<?= set_value('cell') ?>">
-                                            <span class="errorful">
-                                                <?= isset($validation) ? displayError($validation, 'cell') : '' ?>
-                                            </span>
+                                            <select name="season" class="form-control" id="season">
+                                                <?php
+                                                if(set_value('season')) {
+                                                ?>
+                                                <option value="<?= set_value('season') ?>"><?= set_value('season') ?></option>
+                                                <?php } else { ?>
+                                                <option value="">Select season</option>
+                                                <?php } ?>
+                                                <option value="A">A</option>
+                                                <option value="B">B</option>
+                                                <option value="C">C</option>
+                                            </select>
+                                            <div class="errorful">
+                                                <?= isset($validation) ? displayError($validation, 'season') : '' ?>
+                                            </div>
                                         </div>
-
-                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 mb-2">
-                                            <label for="village">Village</label>
-               
-                                            <input type="text" class="form-control" id="village" name="village" value="<?= set_value('village') ?>">
-                                            <span class="errorful">
-                                                <?= isset($validation) ? displayError($validation, 'village') : '' ?>
-                                            </span>
-                                        </div>
-
                                     </div>
 
                                     <div class="form-row">
-                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 mb-2">
-                                            <label for="gender">Gender/Sex</label>
-               
-                                            <select name="gender" class="form-control" id="gender">
-                                                <option value="<?= set_value('gender') ?>">Select Gender</option>
-                                                <option value="Male">Male</option>
-                                                <option value="Female">Female</option>
-                                                <option value="Other">Other</option>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
+                                            <label for="rainy">Good for rainy season?</label>
+                                            
+                                            <select name="rainy" class="form-control" id="rainy">
+                                                <?php
+                                                if(set_value('rainy')) {
+                                                ?>
+                                                <option value="<?= set_value('rainy') ?>"><?= set_value('rainy')=='1'?"Yes":"No" ?></option>
+                                                <?php } else { ?>
+                                                <option value="">Select here</option>
+                                                <?php } ?>
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
                                             </select>
                                             <div class="errorful">
-                                                <?= isset($validation) ? displayError($validation, 'gender') : '' ?>
+                                                <?= isset($validation) ? displayError($validation, 'rainy') : '' ?>
                                             </div>
                                         </div>
 
-                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 mb-2">
-                                            <label for="telephone">Telephone</label>
-                                            <input type="number" class="form-control" id="telephone" name="telephone" value="<?= set_value('telephone') ?>">
-                                            <span class="errorful">
-                                                <?= isset($validation) ? displayError($validation, 'telephone') : '' ?>
-                                            </span>
-                                        </div>
-
-                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 mb-2">
-                                            <label for="admin_role">Admin Role</label>
-               
-                                            <select name="admin_role" class="form-control" id="admin_role">
-                                                <option value="<?= set_value('admin_role') ?>">Select Role</option>
-                                                <option value="Agronomist">Agronomist</option>
-                                                <option value="Admin">Admin</option>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
+                                            <label for="sunny">Good for sunny season?</label>
+                                            <select name="sunny" class="form-control" id="sunny">
+                                                <?php
+                                                if(set_value('sunny')) {
+                                                ?>
+                                                <option value="<?= set_value('sunny') ?>"><?= set_value('sunny')=='1'?"Yes":"No" ?></option>
+                                                <?php } else { ?>
+                                                <option value="">Select here</option>
+                                                <?php } ?>
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
                                             </select>
                                             <div class="errorful">
-                                                <?= isset($validation) ? displayError($validation, 'admin_role') : '' ?>
+                                                <?= isset($validation) ? displayError($validation, 'sunny') : '' ?>
                                             </div>
                                         </div>
+
                                     </div>
 
                                     <button class="btn btn-primary" type="submit" name="register">Register</button>

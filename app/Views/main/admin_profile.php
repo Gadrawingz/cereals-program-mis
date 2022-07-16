@@ -123,20 +123,37 @@
                                         <div class="card">
                                             <h3 class="card-header text-center">Change Password</h3>
                                             <div class="card-body">
-                                                <form>
+                                                <form method="POST" action="<?= site_url('admin/change-pass') ?>" autocomplete="off">
+                                                    <?= csrf_field(); ?>
+                                                    <?php if(!empty(session()->getFlashdata('fail'))) : ?>
+                                                    <div class="alert alert-danger col-xl-6 offset-xl-3 text-center"><?= session()->getFlashdata('fail') ?></div>
+                                                    <?php endif ?>
+                                                    <?php if(!empty(session()->getFlashdata('success'))) : ?>
+                                                    <div class="alert alert-success col-xl-6 offset-xl-3 text-center"><?= session()->getFlashdata('success') ?></div>
+                                                    <?php endif ?>
+
                                                     <div class="row">
                                                         <div class="offset-xl-3 col-xl-6 offset-lg-3 col-lg-3 col-md-12 col-sm-12 col-12 p-4">
                                                             <div class="form-group">
-                                                                <label for="e_password">Current Password</label>
-                                                                <input type="text" class="form-control form-control-md" id="e_password" name="e_password">
+                                                                <label for="current">Current Password</label>
+                                                                <input type="text" class="form-control form-control-md" id="current" name="current" value="<?= set_value('current') ?>">
+                                                                <span class="errorful">
+                                                                    <?= isset($validation) ? displayError($validation, 'current') : '' ?>
+                                                                </span>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="n_password">New Password</label>
-                                                                <input type="password" class="form-control form-control-md" id="n_password" name="n_password">
+                                                                <label for="password">New Password</label>
+                                                                <input type="password" class="form-control form-control-md" id="password" name="password" value="<?= set_value('password') ?>">
+                                                                <span class="errorful">
+                                                                    <?= isset($validation) ? displayError($validation, 'password') : '' ?>
+                                                                </span>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="c_password">Confirm Password</label>
-                                                                <input type="password" class="form-control form-control-md" id="c_password" name="c_password">
+                                                                <label for="cpassword">Confirm Password</label>
+                                                                <input type="password" class="form-control form-control-md" id="cpassword" name="cpassword" value="<?= set_value('cpassword') ?>">
+                                                                <span class="errorful">
+                                                                    <?= isset($validation) ? displayError($validation, 'cpassword') : '' ?>
+                                                                </span>
                                                             </div>
 
                                                             <button type="submit" class="btn btn-primary float-right">Save Changes</button>

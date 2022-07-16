@@ -16,7 +16,9 @@ class UserModel extends Model {
 		'village',
 		'gender',
 		'telephone',
-		'password'
+		'password',
+		'status',
+		'created_at'
 	];
 
 
