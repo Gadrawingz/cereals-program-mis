@@ -44,6 +44,7 @@ $routes->get('admin/logout',   'DashController::adminLogout');
 $routes->group('farmer', ['filter'=>'farmerNoAuth'], function ($routes){
     $routes->get('login', 'AuthController::loginFarmer');
     $routes->get('register', 'AuthController::registerFarmer');
+    $routes->post('save', 'AuthController::saveFarmer');
 });
 
 // Admin group
@@ -92,15 +93,22 @@ $routes->group('farmer', ['filter'=>'adminAuth'], function ($routes){
 
 });
 
+
 $routes->get('cereal/apply', 'CerealController::cerealApplication', ['filter'=>'farmerAuth']);
 $routes->post('cereal/appsub', 'CerealController::cerealAppSubmit', ['filter'=>'farmerAuth']);
 $routes->get('cereal/mine', 'CerealController::cerealAllApplied', ['filter'=>'farmerAuth']);
 
+$routes->get('cereal/requests', 'CerealController::cerealAppRequests', ['filter'=>'adminAuth']);
+$routes->get('cereal/approve/(:num)', 'CerealController::approve/$1', ['filter'=>'adminAuth']);
+
+
 $routes->get('harvest/register', 'HarvestController::harvestRegister', ['filter'=>'farmerAuth']);
 $routes->post('harvest/appsub', 'HarvestController::harvestSubmit', ['filter'=>'farmerAuth']);
 $routes->get('harvest/mine', 'HarvestController::harvestFarmerView', ['filter'=>'farmerAuth']);
-$routes->get('harvest/unchecked', 'HarvestController::harvestsUnchecked', ['filter'=>'adminAuth']);
 
+$routes->get('harvest/unchecked', 'HarvestController::harvestsUnchecked', ['filter'=>'adminAuth']);
+$routes->get('harvest/checked', 'HarvestController::harvestsChecked', ['filter'=>'adminAuth']);
+$routes->get('harvest/approve/(:num)', 'HarvestController::approve/$1', ['filter'=>'adminAuth']);
 
 
 /*

@@ -150,7 +150,7 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">
+                                            <a class="nav-link" href="<?= base_url('cereal/requests') ?>">
                                                 Cereal Requests
                                             </a>
                                         </li>
@@ -218,6 +218,6 @@
             </div>
         </div>
         <!-- end left sidebar -->
-
+        <!-- Gad-Iradufasha's coding -> @gadrawingz, @donnekt -->
         <!-- wrapper  -->
         <div class="dashboard-wrapper">

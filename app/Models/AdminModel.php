@@ -1,5 +1,4 @@
 <?php namespace App\Models;
-
 use CodeIgniter\Model;
 
 class AdminModel extends Model {
@@ -21,7 +20,6 @@ class AdminModel extends Model {
 		'password',
 		'status'
 	];
-
-
 }
+// Gadrawin's coding -> @gadrawingz, @donnekt
 ?>

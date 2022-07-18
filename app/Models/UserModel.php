@@ -20,7 +20,6 @@ class UserModel extends Model {
 		'status',
 		'created_at'
 	];
-
-
 }
+// Gadrawin's coding -> @gadrawingz, @donnekt
 ?>

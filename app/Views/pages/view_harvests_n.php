@@ -2,6 +2,7 @@
             <div class="dashboard-ecommerce">
                 <div class="container-fluid dashboard-content ">
                     <!-- pageheader  -->
+                    <!-- Gad-Iradufasha's coding -> @gadrawingz, @donnekt -->
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
@@ -36,9 +37,9 @@
                                                         <th>N<sup>o</sup></th>
                                                         <th>Cereal Name/Type </th>
                                                         <th>Season </th>
-                                                        <th>Quantity </th>
-                                                        <th>Current Price</th>
-                                                        <th>Outcome(result)</th>
+                                                        <th>Quantity/Price</th>
+                                                        <th>Total Price</th>
+                                                        <th>Harvest Result</th>
                                                         <th>Status </th>
                                                         <th>Date </th>
                                                         <th class="text-center">Action</th>
@@ -53,21 +54,23 @@
                                                     <tr>
                                                         <td><?php echo $n; ?></td>
                                                         <td>
-                                                            ...
+                                                            <?php echo $hv->cereal_type."<br>(".$hv->cereal_name; ?>)
                                                         </td>
 
-                                                        <td><?php echo $hv['season']; ?> </td>
+                                                        <td><?php echo $hv->hseason; ?> </td>
 
-                                                        <td>... kgs </td>
-                                                        <td><?php echo $hv['current_price']; ?> rwf </td>
-                                                        <td><?php echo $hv['outcome']; ?> </td>
-                                                        <td><span class="badge-dot badge-<?php echo $hv['status']==1?"success":"danger";?> mr-1"></span>
+                                                        <td>
+                                                            <?php echo $hv->hquantity; ?> kgs<br>(<?php echo $hv->current_price." rwf";?>)
+                                                        </td>
+                                                        <td><?php echo $hv->hquantity * $hv->current_price; ?> rwf </td>
+                                                        <td><?php echo $hv->result; ?> </td>
+                                                        <td><span class="badge-dot badge-<?php echo $hv->harvestatus==1?"success":"danger";?> mr-1"></span>
                                                             <?php 
-                                                            echo $hv['status'] == 1?"Approved":"Pending";?>
+                                                            echo $hv->harvestatus == 1?"Approved":"Pending";?>
                                                         </td>
-                                                        <td><?php echo $hv['harvest_date']; ?></td>
+                                                        <td><?php echo $hv->harvest_date; ?></td>
                                                         <td class="text-center">
-                                                            <a class="btn btn-sm btn-primary" href="<?= site_url('harvest/enable/'.$hv['harvest_id']) ?>" onclick="return confirm('Do you want to approve this row?')">Approve</a>
+                                                            <a class="btn btn-sm btn-primary" href="<?= site_url('harvest/approve/'.$hv->harvest_id) ?>" onclick="return confirm('Do you want to approve this harvest?')">Approve</a>
                                                         </td>
                                                     </tr>
                                                     <?php $n++; endforeach;endif; ?>

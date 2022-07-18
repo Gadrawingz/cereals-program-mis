@@ -1,5 +1,5 @@
 <?php
-
+// Gadrawin's coding -> @gadrawingz, @donnekt
 namespace App\Libraries;
 
 class Hashing {

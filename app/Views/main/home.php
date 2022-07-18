@@ -1,17 +1,8 @@
-<?php
-/**
- * @var string $page_title     
- * >> The page title (automatically created by CI from the $data array)
- * @var string $page_subtitle  
- * >> The page subtitle (automatically created by CI from the $data array)
- * @var string $page_footer  
- * >> The page subtitle (automatically created by CI from the $data array)
- */
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Required meta tags -->
+    <!-- Gad-Iradufasha's coding -> @gadrawingz, @donnekt -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?= esc($page_title) ?></title>

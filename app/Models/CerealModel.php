@@ -18,7 +18,6 @@ class CerealModel extends Model {
 		'status',
 		'created'
 	];
-
-
 }
+// Gadrawin's coding -> @gadrawingz, @donnekt
 ?>

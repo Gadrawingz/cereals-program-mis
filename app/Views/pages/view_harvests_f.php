@@ -2,6 +2,7 @@
             <div class="dashboard-ecommerce">
                 <div class="container-fluid dashboard-content ">
                     <!-- pageheader  -->
+                    <!-- Gad-Iradufasha's coding -> @gadrawingz, @donnekt -->
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
@@ -34,12 +35,12 @@
                                                 <thead class="bg-light">
                                                     <tr class="border-0">
                                                         <th>N<sup>o</sup></th>
-                                                        <th>Cereal Name </th>
-                                                        <th>Cereal Type </th>
+                                                        <th>Cereal Name/Type </th>
                                                         <th>Season </th>
                                                         <th>Quantity </th>
                                                         <th>Current Price</th>
-                                                        <th>Outcome(result)</th>
+                                                        <th>Total Price</th>
+                                                        <th>Harvest result</th>
                                                         <th>Status </th>
                                                         <th>Date </th>
                                                     </tr>
@@ -53,23 +54,20 @@
                                                     <tr>
                                                         <td><?php echo $n; ?></td>
                                                         <td>
-                                                            ...
+                                                            <?php echo $hv->cereal_type."/ ".$hv->cereal_name; ?>
                                                         </td>
 
-                                                        <td>
-                                                            ...
-                                                        </td>
+                                                        <td><?php echo $hv->hseason; ?> </td>
 
-                                                        <td><?php echo $hv['season']; ?> </td>
-
-                                                        <td>... kgs </td>
-                                                        <td><?php echo $hv['current_price']; ?> rwf </td>
-                                                        <td><?php echo $hv['outcome']; ?> </td>
-                                                        <td><span class="badge-dot badge-<?php echo $hv['status']==1?"success":"danger";?> mr-1"></span>
+                                                        <td><?php echo $hv->hquantity; ?> kgs </td>
+                                                        <td><?php echo $hv->current_price; ?> rwf </td>
+                                                        <td><?php echo $hv->hquantity * $hv->current_price; ?> rwf </td>
+                                                        <td><?php echo $hv->result; ?> </td>
+                                                        <td><span class="badge-dot badge-<?php echo $hv->harvestatus==1?"success":"danger";?> mr-1"></span>
                                                             <?php 
-                                                            echo $hv['status'] == 1?"Approved":"Pending";?>
+                                                            echo $hv->harvestatus == 1?"Approved":"Pending";?>
                                                         </td>
-                                                        <td><?php echo $hv['harvest_date']; ?></td>
+                                                        <td><?php echo $hv->harvest_date; ?></td>
                                                     </tr>
                                                     <?php $n++; endforeach;endif; ?>
                                                 </tbody>

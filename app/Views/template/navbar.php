@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
- 
+<!-- Gad-Iradufasha's coding -> @gadrawingz, @donnekt -->
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -16,13 +16,9 @@
 </head>
 
 <body>
-    <!-- ============================================================== -->
     <!-- main wrapper -->
-    <!-- ============================================================== -->
     <div class="dashboard-main-wrapper">
-        <!-- ============================================================== -->
         <!-- navbar -->
-        <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
                 <a class="navbar-brand" href="#">Cereal MIS</a>

@@ -1,5 +1,5 @@
 <?php namespace App\Controllers;
-
+// Gad-Iradufasha's coding -> @gadrawingz, @donnekt
 use CodeIgniter\Controllers;
 use App\Models\AdminModel;
 use App\Models\UserModel;
@@ -10,8 +10,14 @@ use App\Models\CerealModel;
 class HarvestController extends BaseController {
     // Coding hand :https://github.com/Gadrawingz
 
+    // Can be used at times
+    protected $table ='harvest h';
+    protected $db;
+
     public function __construct() {
         helper(['url', 'form']);
+
+        $this->db = \Config\Database::connect();
     }
 
     public function index() {}
@@ -126,7 +132,8 @@ class HarvestController extends BaseController {
 
         $activeUserId= session()->get('activeUser');
         $userData    = $userModel->find($activeUserId);
-        $viewHarvests = $harvestModel->join('cereal c', 'c.cereal_id=h.harvest_id', 'left')->where('h.farmer_id', $activeUserId)->orderBy('h.harvest_date', 'DESC')->findAll();
+
+        $viewHarvests  = $this->db->table($this->table)->select('c.cereal_name, c.cereal_type, c.land_type, h.harvest_id, h.quantity AS hquantity, h.season AS hseason, h.current_price, h.outcome AS result, h.status AS harvestatus, h.harvest_date')->join('cereal c', 'c.cereal_id=h.cereal_id', 'left')->where('h.farmer_id', $activeUserId)->orderBy('h.harvest_date', 'DESC')->get()->getResult();
 
         $data = [
             'page_title' => 'All harvests you registered',
@@ -151,8 +158,8 @@ class HarvestController extends BaseController {
 
         $activeAdminId = session()->get('activeAdmin');
         $adminData     = $adminModel->find($activeAdminId);
-        $viewHarvests  = $harvestModel->join('cereal c', 'c.cereal_id=h.harvest_id', 'left')->orderBy('h.harvest_date', 'DESC')->findAll();
-        // ->where('status', 0)
+
+        $viewHarvests  = $this->db->table($this->table)->select('c.cereal_name, c.cereal_type, c.land_type, h.harvest_id, h.quantity AS hquantity, h.season AS hseason, h.current_price, h.outcome AS result, h.status AS harvestatus, h.harvest_date')->join('cereal c', 'c.cereal_id=h.cereal_id', 'left')->where(["h.status" => 0])->orderBy('h.harvest_date', 'DESC')->get()->getResult();
 
         $data = [
             'page_title' => 'All pending harvests',
@@ -166,6 +173,38 @@ class HarvestController extends BaseController {
         view('template/sidebar', $data).
         view('pages/view_harvests_n', $data).
         view('template/footer', $data);
+    }
+
+
+    public function harvestsChecked() {
+        $adminModel    = new AdminModel();
+        $harvestModel  = new HarvestModel();
+        $cerealModel   = new CerealModel();
+
+        $activeAdminId = session()->get('activeAdmin');
+        $adminData     = $adminModel->find($activeAdminId);
+
+        $viewHarvests  = $this->db->table($this->table)->select('c.cereal_name, c.cereal_type, c.land_type, h.harvest_id, h.quantity AS hquantity, h.season AS hseason, h.current_price, h.outcome AS result, h.status AS harvestatus, h.harvest_date')->join('cereal c', 'c.cereal_id=h.cereal_id', 'left')->where(["h.status" => 1])->orderBy('h.harvest_date', 'DESC')->get()->getResult();
+
+        $data = [
+            'page_title' => 'All approved harvests',
+            'breadcrumb' => 'Harvest',
+            'adminData'  => $adminData,
+            'harvests'   => $viewHarvests,
+        ];
+
+        return
+        view('template/navbar', $data).
+        view('template/sidebar', $data).
+        view('pages/view_harvests_c', $data).
+        view('template/footer', $data);
+    }
+
+    public function approve($id = null) {
+        $harvestModel = new HarvestModel();
+        $data = ['status'   => '1'];
+        $harvestModel->update($id, $data); 
+        return $this->response->redirect(site_url('harvest/checked'));
     }
 }
 ?>

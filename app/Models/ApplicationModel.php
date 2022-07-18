@@ -11,9 +11,9 @@ class ApplicationModel extends Model {
 		'cereal_id',
 		'quantity',
 		'season',
-		'app_date',
+		'status',
+		'app_date'
 	];
-
-
 }
+// Gadrawin's coding -> @gadrawingz, @donnekt
 ?>

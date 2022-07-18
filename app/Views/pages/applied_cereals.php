@@ -2,6 +2,7 @@
             <div class="dashboard-ecommerce">
                 <div class="container-fluid dashboard-content ">
                     <!-- pageheader  -->
+                    <!-- Gad-Iradufasha's coding -> @gadrawingz, @donnekt -->
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
@@ -51,20 +52,20 @@
                                                     <tr>
                                                         <td><?php echo $n; ?></td>
                                                         <td>
-                                                            <?php echo $cr['cereal_id']; ?>
+                                                            <?php echo $cr->cereal_name; ?>
                                                         </td>
 
                                                         <td>
-                                                            <?php echo $cr['cereal_id']; ?>
+                                                            <?php echo $cr->cereal_type; ?>
                                                         </td>
 
-                                                        <td><?php echo $cr['quantity']; ?> kgs </td>
-                                                        <td><?php echo $cr['season']; ?> </td>
-                                                        <td><span class="badge-dot badge-<?php echo $cr['status']==1?"success":"danger";?> mr-1"></span>
+                                                        <td><?php echo $cr->quantity; ?> kg(s) </td>
+                                                        <td><?php echo $cr->season; ?> </td>
+                                                        <td><span class="badge-dot badge-<?php echo $cr->appstatus==1?"success":"danger";?> mr-1"></span>
                                                             <?php 
-                                                            echo $cr['status'] == 1?"Approved":"Pending";?>
+                                                            echo $cr->appstatus == 1?"Approved":"Pending";?>
                                                         </td>
-                                                        <td><?php echo $cr['app_date']; ?></td>
+                                                        <td><?php echo $cr->app_date; ?></td>
                                                     </tr>
                                                     <?php $n++; endforeach;endif; ?>
                                                 </tbody>

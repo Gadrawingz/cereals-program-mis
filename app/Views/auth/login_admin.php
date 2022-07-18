@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Admin Login</title>
     <!-- Bootstrap CSS -->
+    <!-- Gad-Iradufasha's coding -> @gadrawingz, @donnekt -->
     <link rel="stylesheet" href="<?= base_url('public/assets/vendor/bootstrap/css/bootstrap.min.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('public/assets/vendor/fonts/circular-std/style.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('public/assets/libs/css/style.css'); ?>">

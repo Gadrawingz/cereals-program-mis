@@ -1,6 +1,6 @@
 <?php 
 namespace App\Controllers;
-
+// Gad-Iradufasha's coding -> @gadrawingz, @donnekt
 use CodeIgniter\Controllers;
 use App\Models\AdminModel;
 use App\Models\CerealModel;
@@ -10,8 +10,13 @@ use App\Models\ApplicationModel;
 class CerealController extends BaseController {
     // Coding hand :https://github.com/Gadrawingz
 
+    protected $table ='application app';
+    protected $db;
+
     public function __construct() {
         helper(['url', 'form']);
+
+        $this->db = \Config\Database::connect();
     }
 
     public function cerealRegister() {
@@ -399,7 +404,8 @@ class CerealController extends BaseController {
 
         $activeUserId= session()->get('activeUser');
         $userData    = $userModel->find($activeUserId);
-        $viewCereals = $appModel->where('farmer_id', $activeUserId)->orderBy('app_date', 'DESC')->findAll();
+
+        $viewCereals  = $this->db->table($this->table)->select('c.cereal_name, c.cereal_type, c.land_type, app.app_id, app.farmer_id, app.cereal_id, app.quantity, app.season, app.status AS appstatus, app.app_date')->join('cereal c', 'c.cereal_id=app.cereal_id', 'left')->where('app.farmer_id', $activeUserId)->orderBy('app.app_date', 'DESC')->get()->getResult();
 
         $data = [
             'page_title' => 'All cereals you applied for previously',
@@ -414,6 +420,39 @@ class CerealController extends BaseController {
         view('pages/applied_cereals', $data).
         view('template/footer', $data);
     }
+
+    // At Admin side
+    public function cerealAppRequests() {
+
+        $appModel   = new ApplicationModel();
+        $adminModel = new AdminModel();
+
+        $activeAdminId = session()->get('activeAdmin');
+        $adminData    = $adminModel->find($activeAdminId);
+
+        $viewCereals  = $this->db->table($this->table)->select('c.cereal_name, c.cereal_type, c.land_type, app.app_id, app.farmer_id, app.cereal_id, app.quantity, app.season, app.status AS appstatus, app.app_date')->join('cereal c', 'c.cereal_id=app.cereal_id', 'left')->orderBy('app.app_date', 'DESC')->get()->getResult();
+
+        $data = [
+            'page_title' => 'All submitted requests for cereals',
+            'breadcrumb' => 'Application',
+            'adminData'  => $adminData,
+            'cereals'    => $viewCereals,
+        ];
+
+        return
+        view('template/navbar', $data).
+        view('template/sidebar', $data).
+        view('pages/applied_cer_req', $data).
+        view('template/footer', $data);
+    }
+
+    public function approve($id = null) {
+        $appModel = new ApplicationModel();
+        $data = ['status'   => '1'];
+        $appModel->update($id, $data); 
+        return $this->response->redirect(site_url('cereal/requests'));
+    }
+
 
 }
 ?>

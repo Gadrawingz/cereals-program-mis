@@ -1,13 +1,3 @@
-<?php
-/**
- * @var string $page_title     
- * >> The page title (automatically created by CI from the $data array)
- * @var string $page_subtitle  
- * >> The page subtitle (automatically created by CI from the $data array)
- * @var string $page_footer  
- * >> The page subtitle (automatically created by CI from the $data array)
- */
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Farmer Registration</title>
     <!-- Bootstrap CSS -->
+    <!-- Gad-Iradufasha's coding -> @gadrawingz, @donnekt -->
     <link rel="stylesheet" href="<?= base_url('public/assets/vendor/bootstrap/css/bootstrap.min.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('public/assets/vendor/fonts/circular-std/style.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('public/assets/libs/css/style.css'); ?>">
@@ -83,7 +74,7 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card">
                             <div class="card-body">
-                                <form method="POST" action="<?= base_url('AuthController/saveFarmer') ?>">
+                                <form method="POST" action="<?= base_url('farmer/save') ?>">
                                     <?= csrf_field(); ?>
 
                                     <?php if(!empty(session()->getFlashdata('fail'))) : ?>
@@ -117,7 +108,14 @@
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
                                             <label for="province">Province</label>
                                             <select name="province" class="form-control" id="province">
-                                                <option value="<?= set_value('province') ?>">Select Province</option>
+                                                <?php
+                                                if(set_value('province')) {
+                                                ?>
+                                                <option value="<?= set_value('province') ?>"><?= set_value('province') ?></option>
+                                                <?php } else { ?>
+                                                <option value="">Select Province</option>
+                                                <?php } ?>
+                
                                                 <option value="East">East</option>
                                                 <option value="West">West</option>
                                                 <option value="North">North</option>
@@ -133,8 +131,16 @@
                                             <label for="district">District</label>
                
                                             <select name="district" class="form-control" id="district">
-                                                <option value="<?= set_value('district') ?>">Select District</option>
+
+                                                <?php
+                                                if(set_value('district')) {
+                                                ?>
+                                                <option value="<?= set_value('district') ?>"><?= set_value('district') ?></option>
+                                                <?php } else { ?>
+                                                <option value="">Select District</option>
+                                                <?php } ?>
                                             </select>
+
                                             <div class="errorful">
                                                 <?= isset($validation) ? displayError($validation, 'district') : '' ?>
                                             </div>
@@ -175,7 +181,14 @@
                                             <label for="gender">Gender/Sex</label>
                
                                             <select name="gender" class="form-control" id="gender">
-                                                <option value="<?= set_value('gender') ?>">Select Gender</option>
+                                                <?php
+                                                if(set_value('gender')) {
+                                                ?>
+                                                <option value="<?= set_value('gender') ?>"><?= set_value('gender') ?></option>
+                                                <?php } else { ?>
+                                                <option value="">Select Gender</option>
+                                                <?php } ?>
+
                                                 <option value="Male">Male</option>
                                                 <option value="Female">Female</option>
                                                 <option value="Other">Other</option>
@@ -225,6 +238,33 @@
                         <!-- end validation form -->
                         <!-- ============================================================== -->
                     </div>
-                    
+                </div>
             </div>
-            
+                        <!-- footer -->
+            <div class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
+                             Copyright © <?= date('Y'); ?> Concept. All rights reserved. by Emile Niyindora</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end footer -->
+        </div>
+        <!-- end wrapper  -->
+    </div>
+    <!-- end main wrapper -->
+    <!-- Optional JavaScript -->
+    <!-- jquery 3.3.1 -->
+    <script src="<?= base_url('public/assets/vendor/jquery/jquery-3.3.1.min.js'); ?>"></script>
+    <!-- bootstap bundle js -->
+    <script src="<?= base_url('public/assets/vendor/bootstrap/js/bootstrap.bundle.js'); ?>"></script>
+    <!-- slimscroll js -->
+    <script src="<?= base_url('public/assets/vendor/slimscroll/jquery.slimscroll.js'); ?>"></script>
+    <!-- main js -->
+    <script src="<?= base_url('public/assets/libs/js/main-js.js'); ?>"></script>
+    <script src="<?= base_url('public/assets/libs/js/gad.mapping.js'); ?>"></script>
+</body>
+</html>
+<!-- Gad-Iradufasha's coding -> @gadrawingz, @donnekt -->

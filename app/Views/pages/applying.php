@@ -2,6 +2,7 @@
             <div class="dashboard-ecommerce">
                 <div class="container-fluid dashboard-content ">
                     <!-- pageheader  -->
+                    <!-- Gad-Iradufasha's coding -> @gadrawingz, @donnekt -->
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
@@ -24,7 +25,7 @@
                     <!-- end pageheader  -->
                     <div class="ecommerce-widget">
                         <div class="row">
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
                                 <div class="card">
                                     <div class="card-body">
                                         <form method="POST" action="<?= base_url('cereal/appsub') ?>">

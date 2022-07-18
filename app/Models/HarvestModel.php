@@ -4,7 +4,7 @@ use CodeIgniter\Model;
 
 class HarvestModel extends Model {
 
-	protected $table = 'harvest h';
+	protected $table = 'harvest';
 	protected $primaryKey = 'harvest_id';
 	protected $allowedFields = [
 		'farmer_id',
@@ -17,4 +17,5 @@ class HarvestModel extends Model {
 		'harvest_date'
 	];
 }
+// Gadrawin's coding -> @gadrawingz, @donnekt
 ?>

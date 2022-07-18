@@ -2,6 +2,7 @@
             <div class="dashboard-ecommerce">
                 <div class="container-fluid dashboard-content ">
                     <!-- pageheader  -->
+                    <!-- Gad-Iradufasha's coding -> @gadrawingz, @donnekt -->
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
@@ -87,14 +88,14 @@
                                                 </div>
 
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
-                                                    <label for="season" class="col-form-label">Select outcome</label>
+                                                    <label for="season" class="col-form-label">Outcome (result)</label>
                                                     <select name="outcome" id="outcome" class="form-control form-control">
                                                         <?php
                                                         if(set_value('outcome')) {
                                                         ?>
                                                         <option value="<?= set_value('outcome') ?>"><?= set_value('outcome') ?></option>
                                                         <?php } else { ?>
-                                                        <option value="">Select outcome</option>
+                                                        <option value="">Select harvest result</option>
                                                         <?php } ?>
                                                         <option value="High">High</option>
                                                         <option value="Medium">Medium</option>

@@ -1,6 +1,6 @@
 <?php 
 namespace App\Controllers;
-
+// Gad-Iradufasha's coding -> @gadrawingz, @donnekt
 use CodeIgniter\Controllers;
 use App\Libraries\Hashing;
 
@@ -110,12 +110,12 @@ class AuthController extends BaseController {
             ],
 
             'cpassword'=> [
-                'rules' => 'required|min_length[5]|max_length[20]|matches[password]',
+                'rules'=> 'required|min_length[5]|max_length[20]|matches[password]',
                 'errors'=> [
-                    'required' => 'You must confirm password!',
-                    'min_length' => 'Confirm Password must have at least 5 in length!',
-                    'max_length' => 'Confirm Password must have less than 15 in length!',
-                    'matches' => "Confirm Password does not match to password!"
+                    'required'  =>'You must confirm password!',
+                    'min_length'=>'Confirm Password must have at least 5 in length',
+                    'max_length'=>'Confirm Password must have less than 15 in length!',
+                    'matches'   =>'Confirm Password does not match to password!'
                 ]
             ],
 

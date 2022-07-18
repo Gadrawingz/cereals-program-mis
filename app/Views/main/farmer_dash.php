@@ -2,7 +2,7 @@
             <div class="dashboard-ecommerce">
                 <div class="container-fluid dashboard-content ">
                     <!-- pageheader  -->
-                    <!-- ==================================================== -->
+                    <!-- Gad-Iradufasha's coding -> @gadrawingz, @donnekt -->
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
@@ -46,7 +46,10 @@
                                     <div class="card-body">
                                         <h5 class="text-muted"><?= $cardData['card1_a']; ?></h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1"><?= $cardData['card1_b']; ?></h1>
+                                            <h2 class="mb-1"><?= $cardData['card1_b']; ?></h2>
+                                        </div>
+                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                            <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">Yes</span>
                                         </div>
                                     </div>
                                     <div id="sparkline-revenue"></div>
@@ -58,7 +61,10 @@
                                     <div class="card-body">
                                         <h5 class="text-muted"><?= $cardData['card2_a']; ?></h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1"><?= $cardData['card2_b']; ?></h1>
+                                            <h2 class="mb-1"><?= $cardData['card2_b']; ?></h2>
+                                        </div>
+                                        <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
+                                            <span class="icon-circle-small icon-box-xs text-danger bg-danger-light bg-danger-light "><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1">No</span>
                                         </div>
                                     </div>
                                     <div id="sparkline-revenue3"></div>
@@ -73,10 +79,10 @@
                                     <div class="card-body">
                                         <h5 class="text-muted"><?= $cardData['card3_a']; ?></h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1"><?= $cardData['card3_b']; ?></h1>
+                                            <h2 class="mb-1"><?= $cardData['card3_b']; ?></h2>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">100%</span>
+                                            <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">Yes</span>
                                         </div>
                                     </div>
                                 </div>
@@ -88,10 +94,10 @@
                                     <div class="card-body">
                                         <h5 class="text-muted"><?= $cardData['card4_a']; ?></h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1"><?= $cardData['card4_b']; ?></h1>
+                                            <h2 class="mb-1"><?= $cardData['card4_b']; ?></h2>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
-                                            <span class="icon-circle-small icon-box-xs text-danger bg-danger-light bg-danger-light "><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1">100%</span>
+                                            <span class="icon-circle-small icon-box-xs text-danger bg-danger-light bg-danger-light "><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1">No</span>
                                         </div>
                                     </div>
                                 </div>
