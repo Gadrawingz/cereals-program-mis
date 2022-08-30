@@ -82,6 +82,19 @@ $routes->group('cereal', ['filter'=>'adminAuth'], function ($routes){
     $routes->get('edit/(:num)', 'CerealController::cerealView/$1');
     $routes->post('update/(:num)', 'CerealController::cerealUpdate/$1');
     $routes->get('delete/(:num)', 'CerealController::cerealDelete/$1');
+    
+    // MISCILLANEOUS:
+    $routes->get('regions',  'RegionController::regionViewAll');
+});
+
+
+$routes->group('fertilizer', ['filter'=>'adminAuth'], function ($routes){
+    $routes->get('register', 'Fertilizer::fertilizerRegister');
+    $routes->post('save', 'Fertilizer::fertilizerSave');
+    $routes->get('all',  'Fertilizer::fertilizerViewAll');
+    $routes->get('edit/(:num)', 'Fertilizer::fertilizerView/$1');
+    $routes->post('update/(:num)', 'Fertilizer::fertilizerUpdate/$1');
+    $routes->get('delete/(:num)', 'Fertilizer::fertilizerDelete/$1');
 });
 
 // Under farmer group but managed at admin side:Agronomist

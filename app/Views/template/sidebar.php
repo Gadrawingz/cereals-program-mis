@@ -85,7 +85,7 @@
 
                                         <li class="nav-item">
                                             <a class="nav-link" href="#">
-                                                Agronomists 
+                                                Agrodealers 
                                             </a>
                                         </li>
 
@@ -111,12 +111,10 @@
                             </li>
 
                             <?php } 
-                            if(session()->has('activeAdmin') && session()->get('adminRole')=='Agronomist') {
+                            if(session()->has('activeAdmin') && session()->get('adminRole')=='Agrodealer') {
                             ?>
 
-                            <li class="nav-divider bg-primary">
-                                <?php echo session()->get('adminRole') ?> Menus
-                            </li>
+                            <li class="nav-divider bg-primary">Agro-dealer's  menus</li>
 
                             <li class="nav-item">
                                 <a class="nav-link" href="<?= base_url('admin/dashboard') ?>">
@@ -158,7 +156,6 @@
                                 </div>
                             </li>
 
-
                             <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#harvests" aria-controls="harvests"><i class="fas fa-vials fa-columns"></i>Manage Harvests</a>
                                 <div id="harvests" class="collapse submenu">
@@ -177,6 +174,32 @@
                                     </ul>
                                 </div>
                             </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#mopa-api" aria-controls="mopa-api"><i class="fas fa-book fa-columns"></i>MOPA BOOK</a>
+                                <div id="mopa-api" class="collapse submenu">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?= base_url('cereal/regions') ?>">
+                                                &bull; Cereals & Regions
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?= base_url('cereal/requests') ?>">
+                                                &bull; Add fertilizer info
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?= base_url('cereal/requests') ?>">
+                                                &bull; Fertilizer's Table
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
                             <?php } ?>
 
 

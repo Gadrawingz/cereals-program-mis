@@ -98,14 +98,14 @@ class DashController extends BaseController {
         
         $all_count = $adminModel->get()->getNumRows();
         $adm_count = $adminModel->where('admin_role', 'Admin')->get()->getNumRows();
-        $agr_count = $adminModel->where('admin_role', 'Agronomist')->get()->getNumRows();
+        $agr_count = $adminModel->where('admin_role', 'Agrodealer')->get()->getNumRows();
         $cer_count = $cerealModel->get()->getNumRows();
         $hrv_count = $harvestModel->get()->getNumRows();
 
         $cardData = [
             'admins_title'  => 'All super users',
             'admins_count'  => $adm_count,
-            'agro_title'    => 'All agronomists',
+            'agro_title'    => 'All agro-dealers',
             'agro_count'    => $agr_count,
             'cereals_title' => 'All registered cereals',
             'cereals_count' => $cer_count,
@@ -114,7 +114,7 @@ class DashController extends BaseController {
         ];
         // Gad-Iradufasha's coding -> @gadrawingz, @donnekt
 
-        $page_title = session()->get('adminRole') =='Admin'?'Admin Dashboard':'Agronomist Dashboard';
+        $page_title = session()->get('adminRole') =='Admin'?'Admin Dashboard':'Agro-dealear Dashboard';
 
         $data = [
             'page_title' => $page_title,

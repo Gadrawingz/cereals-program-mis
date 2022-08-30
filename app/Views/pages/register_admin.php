@@ -144,7 +144,7 @@
                
                                             <select name="admin_role" class="form-control" id="admin_role">
                                                 <option value="<?= set_value('admin_role') ?>">Select Role</option>
-                                                <option value="Agronomist">Agronomist</option>
+                                                <option value="Agrodealer">Agrodealer</option>
                                                 <option value="Admin">Admin</option>
                                             </select>
                                             <div class="errorful">

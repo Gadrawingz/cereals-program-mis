@@ -28,7 +28,7 @@ class CerealController extends BaseController {
         $cerealModel = new CerealModel();
 
         $data = [
-            'page_title' => 'Register cereal',
+            'page_title' => 'Register cereal seed',
             'breadcrumb' => 'Cereal',
             'adminData'  => $adminData,
         ];
@@ -159,7 +159,7 @@ class CerealController extends BaseController {
         $adminData    = $adminModel->find($activeAdminId);
         $cerealFetch  = $cerealModel->orderBy('cereal_type', 'ASC')->findAll();
 
-        $page_title = session()->get('adminRole') =='Admin'?'View all registered cereals':'Cereal list for Agronomist';
+        $page_title = session()->get('adminRole') =='Admin'?'View all registered cereals':'Cereal list for Agro-dealer';
 
         $data = [
             'page_title' => $page_title,
