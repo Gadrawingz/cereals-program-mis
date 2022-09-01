@@ -5,6 +5,7 @@ use CodeIgniter\Controllers;
 use App\Models\AdminModel;
 use App\Models\CerealModel;
 use App\Models\UserModel;
+use App\Models\FFarmerModel;
 use App\Models\ApplicationModel;
 
 class CerealController extends BaseController {
@@ -430,10 +431,10 @@ class CerealController extends BaseController {
         $activeAdminId = session()->get('activeAdmin');
         $adminData    = $adminModel->find($activeAdminId);
 
-        $viewCereals  = $this->db->table($this->table)->select('c.cereal_name, c.cereal_type, c.land_type, app.app_id, app.farmer_id, app.cereal_id, app.quantity, app.season, app.status AS appstatus, app.app_date')->join('cereal c', 'c.cereal_id=app.cereal_id', 'left')->orderBy('app.app_date', 'DESC')->get()->getResult();
+        $viewCereals  = $this->db->table($this->table)->select('c.cereal_name, c.cereal_type, c.land_type, app.app_id, app.farmer_id, app.cereal_id, app.quantity, app.season, app.status AS appstatus, app.app_date, f.firstname, f.lastname, f.telephone')->join('cereal c', 'c.cereal_id=app.cereal_id', 'left')->join('farmer f', 'f.farmer_id=app.farmer_id', 'left')->orderBy('app.app_date', 'DESC')->get()->getResult();
 
         $data = [
-            'page_title' => 'All submitted requests for cereals',
+            'page_title' => 'All cereals requests from farmers',
             'breadcrumb' => 'Application',
             'adminData'  => $adminData,
             'cereals'    => $viewCereals,
@@ -446,11 +447,164 @@ class CerealController extends BaseController {
         view('template/footer', $data);
     }
 
-    public function approve($id = null) {
-        $appModel = new ApplicationModel();
-        $data = ['status'   => '1'];
-        $appModel->update($id, $data); 
-        return $this->response->redirect(site_url('cereal/requests'));
+    public function cerealAppReview($id = null) {
+
+        $adminModel = new AdminModel();
+        $appModel   = new ApplicationModel();
+        $cerealModel= new CerealModel();
+        $userModel  = new UserModel();
+
+        $activeAdminId= session()->get('activeAdmin');
+        $adminData    = $adminModel->find($activeAdminId);
+
+        // Getting & carry data to view separately
+        $appDataX      = $appModel->find($id);
+        $cerealDataX   = $cerealModel->find($appDataX['cereal_id']);
+        $farmerDataX   = $userModel->find($appDataX['farmer_id']);
+
+        // Fetch fertilizer to check for before submission @gadrawingz
+        $fertilizers  = $this->db->table('fertilizer')->orderBy('item_type', 'ASC')->get()->getResult();
+
+        $data = [
+            'page_title' => "View & add fertilizers to (".$cerealDataX['cereal_type'].") cereal",
+            'breadcrumb' => 'Cereal',
+            'adminData'  => $adminData,
+            'app'        => $appDataX,
+            'cereal'     => $cerealDataX,
+            'farmer'     => $farmerDataX,
+            'ferts'      => $fertilizers
+        ];
+
+        return
+        view('template/navbar', $data).
+        view('template/sidebar', $data).
+        view('pages/applied_cer_review', $data).
+        view('template/footer', $data);
+    }
+
+
+
+    // SUBMISSION TO SERVER @DONNEKT IT
+    public function cerealApproval() {
+        $f_f_model  = new FFarmerModel();
+        $adminModel = new AdminModel();
+        $appModel   = new ApplicationModel();
+        $cerealModel= new CerealModel();
+        $userModel  = new UserModel();
+
+        // From hidden input type
+        $app_id     = $this->request->getVar('app_id');
+        $cereal_id  = $this->request->getVar('cereal_id');
+        $cereal_type= $this->request->getVar('cereal_type');
+        $cereal_price= $this->request->getVar('cereal_price');
+        $farmer_id  = $this->request->getVar('farmer_id');
+        $quantity   = $this->request->getVar('quantity');
+        $firstname  = $this->request->getVar('firstname');
+        $lastname   = $this->request->getVar('lastname');
+        $telephone  = $this->request->getVar('telephone');
+        $fert1      = $this->request->getVar('fert1');
+        $fert2      = $this->request->getVar('fert2');
+        $fert3      = $this->request->getVar('fert3');
+        $f_quantity = $this->request->getVar('f_quantity');
+        $totalPrice = $cereal_price * $quantity;
+
+        $activeAdminId= session()->get('activeAdmin');
+        $adminData    = $adminModel->find($activeAdminId);
+
+        // Getting & carry data to view separately
+        $appDataX      = $appModel->find($app_id);
+        $cerealDataX   = $cerealModel->find($appDataX['cereal_id']);
+        $farmerDataX   = $userModel->find($appDataX['farmer_id']);
+
+        // Fetch fertilizer to check for before submission @gadrawingz
+        $fertilizers  = $this->db->table('fertilizer')->orderBy('item_type', 'ASC')->get()->getResult();
+
+        $data = [
+            'page_title' => "View & add fertilizers to (".$cerealDataX['cereal_type'].") cereal",
+            'breadcrumb' => 'Cereal',
+            'adminData'  => $adminData,
+            'app'        => $appDataX,
+            'cereal'     => $cerealDataX,
+            'farmer'     => $farmerDataX,
+            'ferts'      => $fertilizers
+        ];
+
+        $validation = $this->validate([
+            'quantity' => [
+                'rules' => 'required|min_length[1]',
+                'errors'=> [
+                    'required' => 'Quantity is required please!',
+                    'min_length' => 'Quantity is not allowed to be under 1 kg!',
+                ]
+            ],
+
+            'fert1' => [
+                'rules' => 'required',
+                'errors'=> [
+                    'required' => 'First fertilizer is required!',
+                ]
+            ],
+        ]);
+
+        if(!$validation) {
+            return 
+            view('template/navbar', $data).
+            view('template/sidebar', $data).
+            view('pages/applied_cer_review', ['validation'=>$this->validator]).
+            view('template/footer', $data);
+        } else {
+            
+            $values = [
+                'farmer_id' => $farmer_id,
+                'cereal_id' => $cereal_id,
+                'quantity'  => $quantity,
+                'fert1'     => $fert1,
+                'fert2'     => $fert2,
+                'fert3'     => $fert3,
+            ];
+
+            // Transfer data to fert_farmer table
+            $query = $f_f_model->insert($values);
+
+            if(!$query) {
+                return redirect()->back()->with('fail', 'Something went wrong!');
+            } else {
+                // And go to update status for approval mark @donnekt 
+                $data_5 = ['status'   => '1'];
+                $appModel->update($app_id, $data_5);
+
+                // SMS API Integration @gadrawingz
+                $names = $firstname." ".$lastname;
+                $data = array(
+                    "sender"=>'KIGALIGAS',
+                    "recipients"=>$telephone,
+                    "message"=>"CEREAL MIS: Mwiriwe, Ubusabe bwanyu (".$names."), Ubu mwemerewe imbuto mwasabye ya (".$cereal_type."), ibiro ".$quantity."kgs, hamwe n'ifumbire ingana na (".$f_quantity.") kgs, Byose bifite agaciro kangana na (".$totalPrice.") rwf, Murakoze!");
+
+                $url = "https://www.intouchsms.co.rw/api/sendsms/.json";
+                $data = http_build_query ($data);
+                $username="benii"; 
+                $password="Ben@1234";
+                $ch = curl_init();
+                curl_setopt($ch,CURLOPT_URL, $url);
+                curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
+                curl_setopt($ch,CURLOPT_POST,true);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+                curl_setopt($ch,CURLOPT_POSTFIELDS, $data);
+                $result = curl_exec($ch);
+                $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                curl_close($ch);
+
+
+                return redirect()->to('cereal/requests')->with('success', 'Approval is successful!');
+            }
+        }
+
+        return
+        view('template/navbar', $data).
+        view('template/sidebar', $data).
+        view('pages/applied_cer_review', $data).
+        view('template/footer', $data);
     }
 
 

@@ -22,8 +22,8 @@
                                 <a class="nav-link" href="<?= base_url('cereal/apply') ?>"><i class="fas fa-leaf fa-columns"></i>Apply for cereals</a>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?= base_url('cereal/mine') ?>"><i class="fas fa-th-list fa-columns"></i>My Cereals</a>
+                            <li class="nav-item" title="My Cereal Requests">
+                                <a class="nav-link" href="<?= base_url('cereal/mine') ?>"><i class="fas fa-th-list fa-columns"></i>My C. Requests</a>
                             </li>
 
                             <li class="nav-item">
@@ -78,7 +78,7 @@
                                 </a>
                             </li>
 
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#report-1" aria-controls="report-1"><i class="fas fa-th-large fa-columns"></i>General Report </a>
                                 <div id="report-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -108,7 +108,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
+                            </li> -->
 
                             <?php } 
                             if(session()->has('activeAdmin') && session()->get('adminRole')=='Agrodealer') {
@@ -143,7 +143,7 @@
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a class="nav-link" href="<?= base_url('cereal/all') ?>">
-                                                Cereals List
+                                                Available Cereals
                                             </a>
                                         </li>
 
@@ -186,14 +186,14 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link" href="<?= base_url('cereal/requests') ?>">
-                                                &bull; Add fertilizer info
+                                            <a class="nav-link" href="<?= base_url('fertilizer/all') ?>">
+                                                &bull; Fertilizer's Table
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link" href="<?= base_url('cereal/requests') ?>">
-                                                &bull; Fertilizer's Table
+                                            <a class="nav-link" href="<?= base_url('fertilizer/register') ?>">
+                                                &bull; Add new fertilizer
                                             </a>
                                         </li>
                                     </ul>

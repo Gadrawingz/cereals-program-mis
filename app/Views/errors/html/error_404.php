@@ -27,7 +27,7 @@
                         <div class="error-section">
                             <img src="../assets/images/error-img.png" alt="" class="img-fluid">
                             <div class="error-section-content">
-                                <h1 class="display-3">File Not Found</h1>
+                                <h1 class="display-3">Page Not Found</h1>
                                 <p>
                                 	<?php if (! empty($message) && $message !== '(null)') : ?>
                                 		<?= nl2br(esc($message)) ?>

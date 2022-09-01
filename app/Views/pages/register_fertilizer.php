@@ -72,7 +72,7 @@
 
                                     <div class="form-row">
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
-                                            <label for="price">Fertilizer Price in <b>Rwf</b></label>
+                                            <label for="price">Fertilizer Price in <b>rwf</b> <span class="text-primary">(Igiciro kitunganiwe)</span></label>
                                             <input type="number" class="form-control" id="price" name="price" value="<?= set_value('price') ?>">
                                             <span class="errorful">
                                                 <?= isset($validation) ? displayError($validation, 'price') : '' ?>
@@ -80,7 +80,7 @@
                                         </div>
                                         
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
-                                            <label for="quantity">Quantity in <b>Kgs</b></label>
+                                            <label for="quantity">Quantity in <b>kgs</b> <span class="text-primary">(Ingano y'ibyakiriwe)</span></label></label>
                                             <input type="number" class="form-control" id="quantity" name="quantity" value="<?= set_value('quantity') ?>">
                                             <span class="errorful">
                                                 <?= isset($validation) ? displayError($validation, 'quantity') : '' ?>
@@ -90,7 +90,7 @@
 
                                     <div class="form-row">
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
-                                            <label for="subsidy_value">Subsidy Value</label>
+                                            <label for="subsidy_value">Subsidy value in <b>rwf</b> <span class="text-primary">(Nkunganire ya Leta)</span></label>
                                             <input type="number" class="form-control" id="subsidy_value" name="subsidy_value" value="<?= set_value('subsidy_value') ?>">
                                             
                                             <span class="errorful">

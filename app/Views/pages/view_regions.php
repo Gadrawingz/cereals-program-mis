@@ -53,7 +53,7 @@
                                                             <?php echo $region->supplier_name; ?>
                                                         </td>
                                                         <td>
-                                                            <p class="btn btn-primary" data-toggle="tooltip"style="width: 100%; text-align: left;" data-placement="right" title="> <?php echo $region->province_name; ?>">
+                                                            <p class="btn btn-primary" data-toggle="tooltip"style="width: 100%; text-align: left;" data-placement="right" title=" <?php echo $region->province_name; ?>">
                                                             <?php echo $region->district_name; ?>
                                                             </p>
                                                         </td>

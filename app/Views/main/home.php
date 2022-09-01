@@ -31,14 +31,14 @@
 <!-- signup form  -->
 <!-- ============================================================== -->
 
-<body style="background: #154360; border-radius: 15px!important;">
+<body style="background-image: url('public/assets/images/main.jpg'); border-radius: 15px!important;">
     <!-- ============================================================== -->
     <!-- signup form  -->
     <!-- ============================================================== -->
     <center>
     <div class="col-md-6 col-lg-6 col-6">
 
-        <div class="card">
+        <div class="card" style="background: #fef9e7!important; border-radius: 50px!important;">
             <div class="card-header">
                 <h1 class="mb-1"><?= esc($page_title) ?></h1>
             </div>

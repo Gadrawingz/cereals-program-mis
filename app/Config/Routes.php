@@ -87,14 +87,13 @@ $routes->group('cereal', ['filter'=>'adminAuth'], function ($routes){
     $routes->get('regions',  'RegionController::regionViewAll');
 });
 
-
+// About Fertilizers:
 $routes->group('fertilizer', ['filter'=>'adminAuth'], function ($routes){
     $routes->get('register', 'Fertilizer::fertilizerRegister');
     $routes->post('save', 'Fertilizer::fertilizerSave');
     $routes->get('all',  'Fertilizer::fertilizerViewAll');
     $routes->get('edit/(:num)', 'Fertilizer::fertilizerView/$1');
     $routes->post('update/(:num)', 'Fertilizer::fertilizerUpdate/$1');
-    $routes->get('delete/(:num)', 'Fertilizer::fertilizerDelete/$1');
 });
 
 // Under farmer group but managed at admin side:Agronomist
@@ -112,7 +111,8 @@ $routes->post('cereal/appsub', 'CerealController::cerealAppSubmit', ['filter'=>'
 $routes->get('cereal/mine', 'CerealController::cerealAllApplied', ['filter'=>'farmerAuth']);
 
 $routes->get('cereal/requests', 'CerealController::cerealAppRequests', ['filter'=>'adminAuth']);
-$routes->get('cereal/approve/(:num)', 'CerealController::approve/$1', ['filter'=>'adminAuth']);
+$routes->get('cereal/app-rev/(:num)', 'CerealController::cerealAppReview/$1', ['filter'=>'adminAuth']);
+$routes->post('cereal/approval', 'CerealController::cerealApproval', ['filter'=>'adminAuth']);
 
 
 $routes->get('harvest/register', 'HarvestController::harvestRegister', ['filter'=>'farmerAuth']);

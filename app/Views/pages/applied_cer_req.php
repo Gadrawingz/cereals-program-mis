@@ -35,8 +35,8 @@
                                                 <thead class="bg-light">
                                                     <tr class="border-0">
                                                         <th>N<sup>o</sup></th>
-                                                        <th>Cereal Name </th>
-                                                        <th>Cereal Type </th>
+                                                        <th>Cereal Name/Type </th>
+                                                        <th>Farmer Name </th>
                                                         <th>Quantity </th>
                                                         <th>Season </th>
                                                         <th>Status </th>
@@ -53,13 +53,12 @@
                                                     <tr>
                                                         <td><?php echo $n; ?></td>
                                                         <td>
-                                                            <?php echo $cr->cereal_name; ?>
+                                                            <?php echo $cr->cereal_name; ?><br>
+                                                            <span class="text-primary"><?php echo $cr->cereal_type; ?></span>
                                                         </td>
-
                                                         <td>
-                                                            <?php echo $cr->cereal_type; ?>
+                                                            <?php echo "by: ".$cr->firstname; ?>
                                                         </td>
-
                                                         <td><?php echo $cr->quantity; ?> kg(s) </td>
                                                         <td><?php echo $cr->season; ?> </td>
                                                         <td><span class="badge-dot badge-<?php echo $cr->appstatus==1?"success":"danger";?> mr-1"></span>
@@ -69,17 +68,16 @@
                                                         <td><?php echo $cr->app_date; ?></td>
                                                         <?php
                                                         echo $cr->appstatus==0? '
-                                                        ?>
                                                         <td class="text-center">
-                                                            <a class="btn btn-sm btn-primary" href="'.site_url('cereal/approve/'.$cr->app_id).'" onclick="return confirm(\'Do you want to approve this request?\')">&nbsp;Approve&nbsp;</a>
+                                                            <a class="btn btn-sm btn-primary" href="'.site_url('cereal/app-rev/'.$cr->app_id).'">&nbsp;Review&nbsp;</a>
                                                         </td>
-                                                        <?php ':'?>
+                                                        ':'
                                                         <td class="text-center">
-                                                            <button class="btn btn-sm btn-warning" disabled><u><strong>Approved</strong></u></a>
+                                                            <button class="btn btn-sm btn-warning" onmouseup="return alert(\'Nothing to do\')" disabled><u><strong>Approved</strong></u></a>
                                                         </td>
-                                                        <?php '; ?>
+                                                        '; ?>
                                                     </tr>
-                                                    <?php $n++; endforeach;endif; ?>
+                                                    <?php $n++; endforeach; endif; ?>
                                                 </tbody>
                                             </table>
                                         </div>
