@@ -39,7 +39,7 @@
     <div class="col-md-6 col-lg-6 col-6">
 
         <div class="card" style="background: #fef9e7!important; border-radius: 50px!important;">
-            <div class="card-header">
+            <div class="card-header bg-danger-light txt-white" style="color: black!important; border-bottom: 4px solid #000;">
                 <h1 class="mb-1"><?= esc($page_title) ?></h1>
             </div>
 
@@ -57,7 +57,7 @@
                         Farmer Login
                     </a>
                     <a href="<?= site_url('farmer/register') ?>" class="btn btn-lg btn-outline-secondary">
-                        Register Farmer
+                        Farmer Signup
                     </a>
                 </div>
 

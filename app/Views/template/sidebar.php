@@ -78,37 +78,31 @@
                                 </a>
                             </li>
 
-                            <!-- <li class="nav-item">
+                            <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#report-1" aria-controls="report-1"><i class="fas fa-th-large fa-columns"></i>General Report </a>
                                 <div id="report-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
-
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">
-                                                Agrodealers 
+                                            <a class="nav-link" href="<?= base_url('report/general') ?>">
+                                                General Report 
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">
-                                                Farmers 
+                                            <a class="nav-link" href="<?= base_url('report/agros') ?>">
+                                                Agrodealers Report
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">
-                                                Cereals 
+                                            <a class="nav-link" href="<?= base_url('report/full-agro') ?>">
+                                                Agro full report
                                             </a>
                                         </li>
 
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">
-                                                Harvests
-                                            </a>
-                                        </li>
                                     </ul>
                                 </div>
-                            </li> -->
+                            </li>
 
                             <?php } 
                             if(session()->has('activeAdmin') && session()->get('adminRole')=='Agrodealer') {

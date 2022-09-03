@@ -43,8 +43,7 @@
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
                                             <label for="cereal_name">Cereal Name</label>
                                             <input type="hidden" class="form-control" id="app_id" name="app_id" value="<?php echo $app['app_id'] ?>">
-
-
+                                            
                                             <input type="hidden" value="<?php echo $app['app_id'] ?>" name="app_id">
                                             <input type="hidden" value="<?php echo $app['cereal_id'] ?>" name="cereal_id">
                                             <input type="hidden" value="<?php echo $cereal['cereal_type'] ?>" name="cereal_type">
@@ -57,14 +56,10 @@
                                             <input type="hidden" value="<?php echo $farmer['telephone'] ?>" name="telephone">
 
                                             <input type="text" class="form-control" id="" value="<?php echo $cereal['cereal_name'] ?>" disabled>
-
-
-
                                         </div>
                                         
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
                                             <label for="cereal_type">Cereal Type</label>
-
                                             <input type="text" class="form-control" id="" value="<?php echo $cereal['cereal_type'] ?>" disabled
                                             >
                                         </div>

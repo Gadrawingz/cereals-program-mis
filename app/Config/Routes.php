@@ -102,9 +102,15 @@ $routes->group('farmer', ['filter'=>'adminAuth'], function ($routes){
     $routes->get('inactive', 'UserController::farmerInactive');
     $routes->get('enable/(:num)', 'UserController::enable/$1');
     $routes->get('disable/(:num)', 'UserController::disable/$1');
-
 });
 
+// Report : 
+$routes->group('report', ['filter'=>'adminAuth'], function ($routes){
+    $routes->get('general', 'ReportController::viewGeneralReport');
+    $routes->get('agros', 'ReportController::viewAgroReport');
+    $routes->get('full-agro', 'ReportController::viewAgroFullReport');
+    $routes->get('agro/(:num)', 'ReportController::xxxx/$1');
+});
 
 $routes->get('cereal/apply', 'CerealController::cerealApplication', ['filter'=>'farmerAuth']);
 $routes->post('cereal/appsub', 'CerealController::cerealAppSubmit', ['filter'=>'farmerAuth']);

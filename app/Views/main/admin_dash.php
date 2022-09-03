@@ -38,11 +38,11 @@
                                             <h2 class="mb-0"> <?= $cardData['harvests_count']; ?></h2>
                                     </div>
                                     <div class="float-right icon-circle-medium  icon-box-lg  bg-secondary-light mt-1">
-                                        <i class="fa fa-handshake fa-fw fa-sm text-secondary"></i>
+                                        <i class="fa fa-leaf fa-fw fa-sm text-secondary"></i>
                                     </div>
                                 </div>
                                 <div class="campaign-img">
-                                    <img src="<?= base_url('public/assets/images/img_1.jpg'); ?>" style="width: 100%; height: 300px;" alt="user"class=" user-avatar-xl">
+                                    <img src="<?= base_url('public/assets/images/breakfast-cereals.jpg'); ?>" style="width: 100%; height: 300px;" alt="user"class=" user-avatar-xl">
                                 </div>
                             </div>
                         </div>

@@ -15,6 +15,7 @@
     <title><?= esc($page_title) ?></title>
 </head>
 
+<!-- <body onload="print()"> -->
 <body>
     <!-- main wrapper -->
     <div class="dashboard-main-wrapper">

@@ -6,6 +6,7 @@ use App\Models\AdminModel;
 use App\Models\CerealModel;
 use App\Models\UserModel;
 use App\Models\FFarmerModel;
+use App\Models\FertilizerModel;
 use App\Models\ApplicationModel;
 
 class CerealController extends BaseController {
@@ -487,6 +488,7 @@ class CerealController extends BaseController {
     // SUBMISSION TO SERVER @DONNEKT IT
     public function cerealApproval() {
         $f_f_model  = new FFarmerModel();
+        $fert_Model = new FertilizerModel();
         $adminModel = new AdminModel();
         $appModel   = new ApplicationModel();
         $cerealModel= new CerealModel();
@@ -595,6 +597,11 @@ class CerealController extends BaseController {
                 $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
                 curl_close($ch);
 
+                // by giving away fert, update the remaining quantity - this 1
+                $singleFert = $fert_Model->where('item_id', $fert1)->first();
+                $remained_f = $singleFert['quantity'] - $f_quantity;
+                $upd_fertis = ['quantity' => $remained_f];
+                $fert_Model->update($fert1, $upd_fertis);
 
                 return redirect()->to('cereal/requests')->with('success', 'Approval is successful!');
             }

@@ -1,0 +1,25 @@
+CRITICAL - 2022-09-02 04:46:20 --> Undefined variable $activeUserId
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\CerealController.php(607): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 607)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\CerealController->cerealApproval()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CerealController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-02 05:44:20 --> Class "App\Controllers\UserModel" not found
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->viewGeneralReport()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-02 05:45:07 --> Class "App\Controllers\HarvestModel" not found
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->viewGeneralReport()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-02 05:45:40 --> Class "App\Controllers\HarvestModel" not found
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->viewGeneralReport()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
