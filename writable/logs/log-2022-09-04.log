@@ -1,0 +1,13 @@
+ERROR - 2022-09-04 09:30:48 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: NO)
+CRITICAL - 2022-09-04 09:30:48 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '2')
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(36): CodeIgniter\BaseModel->find('2')
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->viewGeneralReport()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

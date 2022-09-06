@@ -19,7 +19,7 @@
                     <!-- Gad-Iradufasha's coding -> @gadrawingz, @donnekt -->
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <h1 class="text-center">General overview</h1>
+                            <h1 class="text-center">General Report | Agro-dealer</h1>
                         </div>
                     </div>
                     <!-- end pageheader  -->
@@ -30,8 +30,8 @@
                                 <div class="card">
                                     <div class="card-body p-0">
                                         <div class="table-bordered" id="report_id">
-                                            <center>
-                                                <h3><span class="text-primary">General Overview</span></h3>
+                                            <center><br>
+                                                <h3><span class="text-primary">All Harvests Report</span></h3>
                                             </center>
                                             <table class="table">
                                                 <thead class="bg-light">
@@ -78,9 +78,48 @@
                                             
 
                                             <center>
-                                                <h3><span class="text-primary">More rows</span>
+                                                <h3><span class="text-primary">All recent cereal application</span>
                                                 </h3>
                                             </center>
+
+                                            <table class="table">
+                                                <thead class="bg-light">
+                                                    <tr class="border-0">
+                                                        <th>N<sup>o</sup></th>
+                                                        <th>Cereal Name/Type </th>
+                                                        <th>Farmer Name </th>
+                                                        <th>Quantity </th>
+                                                        <th>Season </th>
+                                                        <th>Status </th>
+                                                        <th>Date </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php
+                                                    if($cereals): 
+                                                    $n = 1;
+                                                    foreach($cereals as $cr): 
+                                                    ?>
+                                                    <tr>
+                                                        <td><?php echo $n; ?></td>
+                                                        <td>
+                                                            <?php echo $cr->cereal_name; ?><br>
+                                                            <span class="text-primary"><?php echo $cr->cereal_type; ?></span>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo "by: ".$cr->firstname; ?>
+                                                        </td>
+                                                        <td><?php echo $cr->quantity; ?> kg(s) </td>
+                                                        <td class="bg-primary"><?php echo $cr->season; ?> </td>
+                                                        <td><span class="badge-dot badge-<?php echo $cr->appstatus==1?"success":"danger";?> mr-1"></span>
+                                                            <?php 
+                                                            echo $cr->appstatus == 1?"Approved":"Pending";?>
+                                                        </td>
+                                                        <td><?php echo $cr->app_date; ?></td>
+                                                    </tr>
+                                                    <?php $n++; endforeach; endif; ?>
+                                                </tbody>
+                                            </table>
 
                                             
                                         </div>

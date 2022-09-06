@@ -175,6 +175,8 @@ class ReportController extends BaseController
         // Harvests Retrieval!
         $viewHarvests  = $this->db->table('harvest h')->select('c.cereal_name, c.cereal_type, c.land_type, h.harvest_id, h.quantity AS hquantity, h.season AS hseason, h.current_price, h.outcome AS result, h.status AS harvestatus, h.harvest_date')->join('cereal c', 'c.cereal_id=h.cereal_id', 'left')->orderBy('h.harvest_date', 'DESC')->get()->getResult();
 
+        $viewCereals  = $this->db->table('application app')->select('c.cereal_name, c.cereal_type, c.land_type, app.app_id, app.farmer_id, app.cereal_id, app.quantity, app.season, app.status AS appstatus, app.app_date, f.firstname, f.lastname, f.telephone')->join('cereal c', 'c.cereal_id=app.cereal_id', 'left')->join('farmer f', 'f.farmer_id=app.farmer_id', 'left')->orderBy('app.app_date', 'DESC')->get()->getResult();
+
         $cardData = [
             'all_far_title'     => 'All farmers in general',
             'all_far_count'     => $all_fc_count,
@@ -203,7 +205,8 @@ class ReportController extends BaseController
             'breadcrumb' => 'General Report',
             'adminData'  => $adminData,
             'cardData'   => $cardData,
-            'harvests'   => $viewHarvests,
+            'harvests'   => $viewHarvests, // Harvests summary
+            'cereals'    => $viewCereals, // Cereals summary
         ];
 
         return 
