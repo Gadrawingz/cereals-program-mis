@@ -90,16 +90,7 @@ class AuthController extends BaseController {
                     'min_length' => 'Number should have at least 10 in length'
                 ]
             ],
-
-            /*'email'=> [
-                'rules' => 'required|valid_email|is_unique[tableName.email]',
-                'errors'=> [
-                    'required' => 'Your email is required!',
-                    'valid_email' => 'Your email is invalid!',
-                    'is_unique' => 'This email already taken!'
-                ]
-            ],*/
-
+            
             'password'=> [
                 'rules' => 'required|min_length[5]|max_length[20]',
                 'errors'=> [

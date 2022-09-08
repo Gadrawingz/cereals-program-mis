@@ -30,10 +30,7 @@
                                 <div class="card">
                                     <div class="card-body p-0">
                                         <div class="table-bordered" id="report_id">
-                                            <center>
-                                                <h3><span class="text-primary">General Overview</span></h3>
-                                            </center>
-
+                                            
                                             <table class="table" style="width: 100%">
                                                 <thead class="bg-light">
                                                     <tr class="bg-primary" style="color: white!important;">
@@ -42,7 +39,7 @@
                                                         </th>
 
                                                         <th class="text-white text-center" style="font-size: 18px">
-                                                            <?= $cardData['ferts_title']; ?>
+                                                            Registered Farmers
                                                         </th>
 
                                                         <th class="text-white text-center" style="font-size: 18px">
@@ -62,7 +59,7 @@
                                                         </td>
 
                                                         <td>
-                                                            <center><p class="text-center" style="font-size: 18px; color: #000;"><?= $cardData['ferts_count']; ?> fertilizer(s)</p></center>
+                                                            <center><p class="text-center" style="font-size: 18px; color: #000;"><?= $cardData['active_fc_count'] + $cardData['inactive_fc_count']; ?> farmer(s)</p></center>
                                                         </td>
 
                                                         <td>
@@ -79,7 +76,7 @@
                                             
 
                                             <center>
-                                                <h3><span class="text-primary">Users/Admins View</span>
+                                                <h3><span class="text-primary">All super users & farmers</span>
                                                 </h3>
                                             </center>
 
@@ -95,7 +92,7 @@
                                                             <?= $cardData['agro_title']; ?>
                                                         </th>
 
-                                                        <th class="text-white text-center bg-primary" style="font-size: 18px">
+                                                        <th class="text-white text-center bg-danger" style="font-size: 18px">
                                                             <?= $cardData['active_fc_title']; ?>
                                                         </th>
 
@@ -120,7 +117,54 @@
                                                         </td>
 
                                                         <td>
-                                                            <center><p style="font-size: 18px; color: #000;"><?= $cardData['inactive_fc_count']; ?>farmer(s)</p></center>
+                                                            <center><p style="font-size: 18px; color: #000;"><?= $cardData['inactive_fc_count']; ?> farmer(s)</p></center>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table><br><br>
+
+                                            <center>
+                                                <h3><span class="text-primary">All super users & farmers</span>
+                                                </h3>
+                                            </center>
+
+                                            <table class="table" style="width: 100%">
+                                                <thead class="bg-light">
+                                                    <tr class="bg-primary" style="color: white!important;">
+                                                        <th class="text-white text-center" style="font-size: 18px">
+                                                            All cereals
+                                                        </th>
+
+                                                        <th class="text-white text-center" style="font-size: 18px">
+                                                            Pending requests (cereal)
+                                                        </th>
+
+                                                        <th class="text-white text-center" style="font-size: 18px">
+                                                            Accepted requests (cereal)
+                                                        </th>
+
+                                                        <th class="text-white text-center bg-danger" style="font-size: 18px">
+                                                            <?= $cardData['ferts_title']; ?>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <center><p class="text-center" style="font-size: 18px; color: #000;"><?= $cardData['cereals_count']; ?> cereal(s)</p></center>
+                                                        </td>
+
+                                                        <td>
+                                                            <center><p class="text-center" style="font-size: 18px; color: #000;"><?= $cardData['app_cer_0']; ?> cereal(s)</p></center>
+                                                        </td>
+
+                                                        <td>
+                                                            <center><p class="text-center" style="font-size: 18px; color: #000;"><?= $cardData['app_cer_1']; ?> cereal(s)</p></center>
+                                                        </td>
+
+                                                        <td>
+                                                            <center><p class="text-center" style="font-size: 18px; color: #000;"><?= $cardData['ferts_count']; ?> fertilizer(s)</p></center>
                                                         </td>
                                                     </tr>
                                                 </tbody>

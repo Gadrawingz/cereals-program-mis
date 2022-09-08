@@ -39,12 +39,16 @@ class ReportController extends BaseController
         $ferts_count= $fert_Model->get()->getNumRows();
         $adm_count = $adminModel->where('admin_role', 'Admin')->get()->getNumRows();
         $agr_count = $adminModel->where('admin_role', 'Agrodealer')->get()->getNumRows();
-        $cer_count = $cerealModel->get()->getNumRows();
         $hrv_count = $harvestModel->get()->getNumRows();
 
         // farmer's Donee(s)
         $active_fc  = $userModel->where('status', 1)->get()->getNumRows();
         $inactive_fc= $userModel->where('status', 0)->get()->getNumRows();
+
+        // Cereals 
+        $cer_count = $cerealModel->get()->getNumRows();
+        $app_cer_0 = $appModel->where('status', 0)->get()->getNumRows();
+        $app_cer_1 = $appModel->where('status', 1)->get()->getNumRows();
 
 
         $cardData = [
@@ -64,6 +68,10 @@ class ReportController extends BaseController
             'active_fc_count'   => $active_fc,
             'inactive_fc_title' => 'All inactive farmers',
             'inactive_fc_count' => $inactive_fc,
+            'app_cer_0'         => $app_cer_0,
+            'app_cer_1'         => $app_cer_1,
+
+
         ];
 
         // Gad-Iradufasha's coding -> @gadrawingz, @donnekt

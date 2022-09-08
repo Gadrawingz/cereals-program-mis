@@ -96,7 +96,7 @@
 
                                         <li class="nav-item">
                                             <a class="nav-link" href="<?= base_url('report/full-agro') ?>">
-                                                Agro full report
+                                                Individual Report
                                             </a>
                                         </li>
 

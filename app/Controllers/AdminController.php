@@ -3,13 +3,17 @@ namespace App\Controllers;
 // Gad-Iradufasha's coding -> @gadrawingz, @donnekt
 use CodeIgniter\Controllers;
 use App\Models\AdminModel;
+use App\Models\ProvinceModel;
+use App\Models\DistrictModel;
 use App\Libraries\Hashing;
 
 class AdminController extends BaseController {
     // Coding hand :https://github.com/Gadrawingz
 
+    protected $db;
     public function __construct() {
         helper(['url', 'form']);
+        $this->db = \Config\Database::connect();
     }
 
     public function adminRegistration() {
@@ -35,6 +39,9 @@ class AdminController extends BaseController {
     public function adminSave() {
 
         $adminModel = new AdminModel();
+        $districtMd = new DistrictModel();
+        $provinceMd = new ProvinceModel();
+
         $activeAdminId= session()->get('activeAdmin');
         $adminData = $adminModel->find($activeAdminId);
 
@@ -127,32 +134,28 @@ class AdminController extends BaseController {
             view('pages/register_admin', ['validation'=>$this->validator]).
             view('template/footer', $data);
         } else {
-            $firstname  = $this->request->getPost('firstname');
-            $lastname   = $this->request->getPost('lastname');
+
+            // Conversion about Name to Relative IDs (Dist & Prov)
             $province   = $this->request->getPost('province');
             $district   = $this->request->getPost('district');
-            $sector     = $this->request->getPost('sector');
-            $cell       = $this->request->getPost('cell');
-            $village    = $this->request->getPost('village');
-            $gender     = $this->request->getPost('gender');
-            // TEL. GOTTA BE PWD BY DEFAULT: PLAY 2 ROLES
-            $telephone  = $this->request->getPost('telephone');
-            $admin_role = $this->request->getPost('admin_role');
 
+            $singleProv = $provinceMd->where('province_name', $province)->first();
+            $singleDist = $districtMd->where('district_name', $district)->first();
+
+            $telephone   = $this->request->getPost('telephone');
             $values = [
-                'firstname'  => $firstname,
-                'lastname'   => $lastname,
-                'province'   => $province,
-                'district'   => $district,
-                'sector'     => $sector,
-                'cell'       => $cell,
-                'village'    => $village,
-                'gender'     => $gender,
+                'firstname'  => $this->request->getPost('firstname'),
+                'lastname'   => $this->request->getPost('lastname'),
+                'sector'     => $this->request->getPost('sector'),
+                'cell'       => $this->request->getPost('cell'),
+                'village'    => $this->request->getPost('village'),
+                'gender'     => $this->request->getPost('gender'),
+                'admin_role' => $this->request->getPost('admin_role'),
+                'province'   => $singleProv['province_id'],
+                'district'   => $singleDist['district_id'],
                 'telephone'  => $telephone,
-                'password'   => Hashing::make($telephone),
-                'admin_role' => $admin_role,
+                'password'   => Hashing::make($telephone),// By default PSW is TEL
             ];
-
 
             $adminModel = new \App\Models\AdminModel();
             $query = $adminModel->insert($values);
@@ -162,6 +165,7 @@ class AdminController extends BaseController {
             } else {
                 return redirect()->to('admin/register')->with('success', 'Registration is successful!');
             }
+            
         }
     }
 
@@ -252,7 +256,6 @@ class AdminController extends BaseController {
         $adminModel->update($id, $data); 
         return $this->response->redirect(site_url('admin/all'));
     }
-
 
     public function changepass() {
         $adminModel = new AdminModel();

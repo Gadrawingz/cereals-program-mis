@@ -1,0 +1,153 @@
+CRITICAL - 2022-09-07 04:57:54 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(183): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminViewAll()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-07 04:58:16 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(127): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminDashboard()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-07 06:22:08 --> Cannot redeclare App\Controllers\AdminController::__construct()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-09-07 06:23:39 --> Undefined array key "district_id"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 142)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-07 06:26:06 --> syntax error, unexpected token "(array)"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('/AdminControlle...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('/AdminControlle...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-07 06:26:44 --> Attempt to read property "district_id" on array
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 142)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-07 06:27:31 --> Undefined array key "district_id"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 142)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-07 06:29:01 --> Undefined variable $province_id
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 155)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-07 06:30:32 --> Attempt to read property "district_id" on array
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 142)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-07 06:31:05 --> Undefined array key "district_id"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 142)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-07 06:31:34 --> Undefined array key "district_id"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 142)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-07 06:33:12 --> Attempt to read property "district_id" on array
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 143)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-07 07:51:43 --> Array to string conversion
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 143)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-07 07:54:04 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-07 07:55:51 --> Undefined variable $province_id
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 160)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-07 07:58:28 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-07 07:59:26 --> Undefined variable $province_id
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 162)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-07 08:00:00 --> Undefined variable $query
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(171): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 171)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-07 08:01:23 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-07 08:02:45 --> Undefined variable $province_id
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 161)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-07 08:04:17 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-07 08:04:50 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminSave()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
