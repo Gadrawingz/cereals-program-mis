@@ -10,7 +10,6 @@
                 a.document.close();
                 a.print();
             }
-
             </script>
 
             <div class="dashboard-ecommerce">
@@ -33,28 +32,26 @@
                                             <br>
                                             <h2><span class="ml-3 text-primary">Search for report Accordingly</span></h2><hr><br>
                                             
-                                            <form method="POST" action="<?= base_url('fertilizer/save') ?>">
+                                            <form method="POST" action="<?= base_url('') ?>">
                                                 <div class="form-row row ml-2 mr-2">
-                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
                                                         <label for="seller">Find Report by Agro-dealer</label>
-                                                        <select name="seller" class="form-control" id="seller">
-                                                            <option value="">Gasabo</option>
+                                                        
+                                                        <select name="district" class="form-control" id="district">
+                                                            <?php
+                                                            foreach($districts as $dist): ?>
+                                                            <option value="<?php echo $dist->district_id; ?>"><?php echo $dist->district_name; ?></option>
+                                                            <?php endforeach; ?>
                                                         </select>
                                                     </div>
 
-                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
-                                                        <label for="seller">Find Report by District</label>
-                                                        <select name="seller" class="form-control" id="seller">
-                                                            <option value="">Gasabo</option>
-                                                        </select>
+                                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                                        <label for="seller">***************</label>
+                                                        <button style="width: 100%!important;" class="btn form-control btn-primary" type="submit">
+                                                            Search Report
+                                                        </button>
                                                     </div>
-                                                </div>
-
-                                                <div class="form-row row ml-2 mr-2">
-                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mt-2 mb-2">
-                                                        <button class="btn btn-lg btn-primary" name="submit">Search Report</button>
-                                                    </div>
-                                                </div>
+                                                </div><br>
 
                                             </form>
                                         </div>

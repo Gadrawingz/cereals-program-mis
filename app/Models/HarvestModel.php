@@ -8,6 +8,7 @@ class HarvestModel extends Model {
 	protected $primaryKey = 'harvest_id';
 	protected $allowedFields = [
 		'farmer_id',
+		'district',
 		'cereal_id',
 		'season',
 		'quantity',

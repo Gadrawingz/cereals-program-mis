@@ -23,6 +23,10 @@
     <!-- main js -->
     <script src="<?= base_url('public/assets/libs/js/main-js.js'); ?>"></script>
     <script src="<?= base_url('public/assets/libs/js/gad.mapping.js'); ?>"></script>
+
+    <script src="<?= base_url('public/assets/vendor/charts/charts-bundle/Chart.bundle.js'); ?>"></script>
+    <script src="<?= base_url('public/assets/vendor/charts/charts-bundle/chartjs.js'); ?>"></script>
+
 </body>
 </html>
 <!-- Gad-Iradufasha's coding -> @gadrawingz, @donnekt -->

@@ -331,6 +331,8 @@ class CerealController extends BaseController {
         $appModel   = new ApplicationModel();
         
         $activeUserId= session()->get('activeUser');
+        $activeDistId= session()->get('activeDist');
+
         $userData    = $userModel->find($activeUserId);
         $viewCereals   = $cerealModel->orderBy('created_at', 'DESC')->findAll();
 
@@ -382,10 +384,11 @@ class CerealController extends BaseController {
             $cerealModel->update($cid, $updatable);
 
             $values = [
-                'farmer_id' => $activeUserId,
-                'cereal_id' => $cid,
-                'quantity'  => $qty,
-                'season'    => $this->request->getVar('season'),
+                'farmer_id'   => $activeUserId,
+                'district'    => $activeDistId,
+                'cereal_id'   => $cid,
+                'quantity'    => $qty,
+                'season'      => $this->request->getVar('season'),
             ];
 
             $query = $appModel->insert($values);
@@ -405,6 +408,7 @@ class CerealController extends BaseController {
         $userModel = new UserModel();
 
         $activeUserId= session()->get('activeUser');
+        $activeDistId= session()->get('activeDist');
         $userData    = $userModel->find($activeUserId);
 
         $viewCereals  = $this->db->table($this->table)->select('c.cereal_name, c.cereal_type, c.land_type, app.app_id, app.farmer_id, app.cereal_id, app.quantity, app.season, app.status AS appstatus, app.app_date')->join('cereal c', 'c.cereal_id=app.cereal_id', 'left')->where('app.farmer_id', $activeUserId)->orderBy('app.app_date', 'DESC')->get()->getResult();

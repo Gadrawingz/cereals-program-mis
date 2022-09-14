@@ -8,6 +8,7 @@ class ApplicationModel extends Model {
 	protected $primaryKey = 'app_id';
 	protected $allowedFields = [
 		'farmer_id',
+		'district',
 		'cereal_id',
 		'quantity',
 		'season',

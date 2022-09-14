@@ -82,6 +82,13 @@
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#report-1" aria-controls="report-1"><i class="fas fa-th-large fa-columns"></i>General Report </a>
                                 <div id="report-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?= base_url('report/view-stats') ?>">
+                                                Statatistics
+                                            </a>
+                                        </li>
+
                                         <li class="nav-item">
                                             <a class="nav-link" href="<?= base_url('report/general') ?>">
                                                 General Report 

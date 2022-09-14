@@ -109,6 +109,7 @@ $routes->group('report', ['filter'=>'adminAuth'], function ($routes){
     $routes->get('general', 'ReportController::viewGeneralReport');
     $routes->get('agros', 'ReportController::viewAgroReport');
     $routes->get('full-agro', 'ReportController::viewAgroFullReport');
+    $routes->get('view-stats', 'ReportController::viewFullStats');
     $routes->get('agro/(:num)', 'ReportController::xxxx/$1');
 });
 

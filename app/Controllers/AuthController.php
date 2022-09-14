@@ -17,6 +17,11 @@ class AuthController extends BaseController {
 
     // Save Farmer
     public function saveFarmer() {
+
+        $userModel = new \App\Models\UserModel();
+        $distModel = new \App\Models\DistrictModel();
+        $provModel = new \App\Models\ProvinceModel();
+
         $data = [
             'app_name' => "Cereal MIS",
             'page_title' => "Farmer Registration",
@@ -119,8 +124,15 @@ class AuthController extends BaseController {
             // Done
             $firstname = $this->request->getPost('firstname');
             $lastname  = $this->request->getPost('lastname');
+
+            // Push IDS instead of ID::: ===================
             $province  = $this->request->getPost('province');
             $district  = $this->request->getPost('district');
+
+            $singleProv = $provModel->where('province_name', $province)->first();
+            $singleDist = $distModel->where('district_name', $district)->first();
+            // =============================================
+
             $sector    = $this->request->getPost('sector');
             $cell      = $this->request->getPost('cell');
             $village   = $this->request->getPost('village');
@@ -131,8 +143,8 @@ class AuthController extends BaseController {
             $values = [
                 'firstname' => $firstname,
                 'lastname'  => $lastname,
-                'province'  => $province,
-                'district'  => $district,
+                'province'  => $singleProv['province_id'],
+                'district'  => $singleDist['district_id'],
                 'sector'    => $sector,
                 'cell'    => $cell,
                 'village'    => $village,
@@ -141,7 +153,6 @@ class AuthController extends BaseController {
                 'password'    => Hashing::make($password),
             ];
 
-            $userModel = new \App\Models\UserModel();
             $query = $userModel->insert($values);
 
             if(!$query) {
@@ -199,8 +210,10 @@ class AuthController extends BaseController {
                 session()->setFlashdata('fail', "Your account is not approved!");
                 return redirect()->to('farmer/login')->withInput();
             } else {
-                $farmer_id = $user['farmer_id'];
+                $farmer_id  = $user['farmer_id'];
                 session()->set('activeUser', $farmer_id);
+                session()->set('activeDist', $user['district']);
+                session()->set('activeProv', $user['province']);
                 return redirect()->to('farmer/dashboard');
             }
         }
@@ -255,6 +268,8 @@ class AuthController extends BaseController {
                 $admin_role = $admin['admin_role'];
                 session()->set('activeAdmin', $admin_id);
                 session()->set('adminRole', $admin_role);
+                session()->set('activeDist', $admin['district']);
+                session()->set('activeProv', $admin['province']);
                 return redirect()->to('admin/dashboard');
             }
         }

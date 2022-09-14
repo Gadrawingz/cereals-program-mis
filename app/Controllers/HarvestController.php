@@ -107,7 +107,8 @@ class HarvestController extends BaseController {
 
         } else {
             $values = [
-                'farmer_id' 	=> $activeUserId,
+                'farmer_id'     => session()->get('activeUser'),
+                'district ' 	=> session()->get('activeDist'),
                 'cereal_id'		=> $this->request->getVar('cereal_id'),
                 'season' 		=> $this->request->getVar('season'),
                 'quantity'		=> $this->request->getVar('quantity'),
