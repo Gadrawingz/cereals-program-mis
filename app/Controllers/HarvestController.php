@@ -108,13 +108,14 @@ class HarvestController extends BaseController {
         } else {
             $values = [
                 'farmer_id'     => session()->get('activeUser'),
-                'district ' 	=> session()->get('activeDist'),
+                'district' 	=> session()->get('activeDist'),
                 'cereal_id'		=> $this->request->getVar('cereal_id'),
                 'season' 		=> $this->request->getVar('season'),
                 'quantity'		=> $this->request->getVar('quantity'),
                 'current_price' => $this->request->getVar('price'),
                 'outcome' 		=> $this->request->getVar('outcome'),
             ];
+            
             $query = $harvestModel->insert($values);
 
             if($query) {
@@ -202,9 +203,41 @@ class HarvestController extends BaseController {
     }
 
     public function approve($id = null) {
+
         $harvestModel = new HarvestModel();
+        $userModel    = new UserModel();
+
         $data = ['status'   => '1'];
-        $harvestModel->update($id, $data); 
+        $harvestModel->update($id, $data);
+
+        // SMS API Integration @gadrawingz
+        $harvest    = $harvestModel->where('harvest_id', $id)->first();
+        $farmer_id  = $harvest['farmer_id'];
+        $singleUser  = $userModel->find($farmer_id);
+        $fullName    = $singleUser['firstname']." ".$singleUser['lastname'];
+        $harvestTotal = $harvest['current_price'] * $harvest['quantity'];
+
+        $data = array(
+            "sender"=>'KIGALIGAS',
+            "recipients"=>$singleUser['telephone'],
+            "message"=>"CEREAL MIS: Muraho, (".$fullName."), Umusaruro wanyu wibyo mwejeje bingana na ".$harvest['quantity']."kg(s) bihagaze agaciro kagana na ".$harvestTotal."rwf, Igihembwe cy'ihinga cya (".$harvest['season'].") Byemejwe, Murakoze!");
+
+        $url = "https://www.intouchsms.co.rw/api/sendsms/.json";
+        $data = http_build_query ($data);
+        $username="benii"; 
+        $password="Ben@1234";
+        $ch = curl_init();
+        curl_setopt($ch,CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
+        curl_setopt($ch,CURLOPT_POST,true);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($ch,CURLOPT_POSTFIELDS, $data);
+        $result = curl_exec($ch);
+        $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+ 
+
         return $this->response->redirect(site_url('harvest/checked'));
     }
 }

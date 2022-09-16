@@ -96,7 +96,7 @@ $routes->group('fertilizer', ['filter'=>'adminAuth'], function ($routes){
     $routes->post('update/(:num)', 'Fertilizer::fertilizerUpdate/$1');
 });
 
-// Under farmer group but managed at admin side:Agronomist
+// Under farmer group but managed at admin side:Agro-dealer
 $routes->group('farmer', ['filter'=>'adminAuth'], function ($routes){
     $routes->get('active', 'UserController::index');
     $routes->get('inactive', 'UserController::farmerInactive');

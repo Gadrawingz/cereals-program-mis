@@ -381,7 +381,12 @@ class CerealController extends BaseController {
             $cereal     = $cerealModel->where('cereal_id', $cid)->first();
             $remained_q = $cereal['quantity'] - $qty;
             $updatable  = ['quantity' => $remained_q];
-            $cerealModel->update($cid, $updatable);
+
+            if($qty <= $cereal['quantity']) {
+                $cerealModel->update($cid, $updatable);
+            } else {
+                return redirect()->to('farmer/dashboard')->with('fail', 'You applied for too much cereal, Only('.$cereal['quantity'].') kg(s) left in store, Try below '.$cereal['quantity'].')kgs please!');
+            }
 
             $values = [
                 'farmer_id'   => $activeUserId,
@@ -390,7 +395,6 @@ class CerealController extends BaseController {
                 'quantity'    => $qty,
                 'season'      => $this->request->getVar('season'),
             ];
-
             $query = $appModel->insert($values);
 
             if($query) {
@@ -512,6 +516,9 @@ class CerealController extends BaseController {
         $fert2      = $this->request->getVar('fert2');
         $fert3      = $this->request->getVar('fert3');
         $f_quantity = $this->request->getVar('f_quantity');
+        $c_quantity = $this->request->getVar('c_quantity');
+        $cq_untouch = $this->request->getVar('c_quantity_untouch'); // Untouched quantity
+
         $totalPrice = $cereal_price * $quantity;
 
         $activeAdminId= session()->get('activeAdmin');
@@ -536,11 +543,19 @@ class CerealController extends BaseController {
         ];
 
         $validation = $this->validate([
-            'quantity' => [
+            'f_quantity' => [
                 'rules' => 'required|min_length[1]',
                 'errors'=> [
-                    'required' => 'Quantity is required please!',
-                    'min_length' => 'Quantity is not allowed to be under 1 kg!',
+                    'required' => 'Fertilizer quantity is required please!',
+                    'min_length' => 'Fertilizer quantity is not allowed to be under 1 kg!',
+                ]
+            ],
+
+            'c_quantity' => [
+                'rules' => 'required|min_length[1]',
+                'errors'=> [
+                    'required' => 'Cereal quantity is required please!',
+                    'min_length' => 'Cereal quantity is not allowed to be under 1 kg!',
                 ]
             ],
 
@@ -606,6 +621,68 @@ class CerealController extends BaseController {
                 $remained_f = $singleFert['quantity'] - $f_quantity;
                 $upd_fertis = ['quantity' => $remained_f];
                 $fert_Model->update($fert1, $upd_fertis);
+
+                // If Agro changed cereal quantity at his side:(NB)
+                $appModel->update($app_id, ['quantity' => $c_quantity]);
+
+                // If farmer given quantity is on-fly edited by agrodealer
+                // Update quantity again; // .valid @gadrawingz see!
+                
+                if ($c_quantity>$cq_untouch) {
+                    
+                    // Get last quantity data by this id (1)
+                    $singleC1 = $cerealModel->where('cereal_id', $cereal_id)->first();
+                    $lastInQuantity = $singleC1['quantity'];
+
+                    // Get the difference between the quantity added by farmer 
+                    // (cq_untouch) & the quantity modified by agro(c_quantity) (2)
+                    $new_cereal_quantity = $c_quantity - $cq_untouch;
+
+                    // Get final result to push as update(3)
+                    $updates = ['quantity' => $lastInQuantity-$new_cereal_quantity];
+                    
+                    // Update final data (4)
+                    $cerealModel->update($cereal_id, $updates);
+
+                } else if ($c_quantity<$cq_untouch) {
+                    
+                    // Get last quantity data by this id (1)
+                    $singleC1 = $cerealModel->where('cereal_id', $cereal_id)->first();
+                    $lastInQuantity = $singleC1['quantity'];
+
+                    // Get the difference between the quantity added by farmer 
+                    // (cq_untouch) & the quantity modified by agro(c_quantity) (2)
+                    $new_cereal_quantity = $cq_untouch - $c_quantity;
+
+                    // Get final result to push as update(3)
+                    $updates = ['quantity' => $lastInQuantity+$new_cereal_quantity];
+                    
+                    // Update final data (4)
+                    $cerealModel->update($cereal_id, $updates);
+
+                    //PUSH MESSAGE: QUANTITY LOWERED BY AGRO:
+                    $data = array(
+                        "sender"=>'KIGALIGAS',
+                        "recipients"=>$telephone,
+                        "message"=>"CEREAL MIS: Mwiriwe (".$names."), Kubera imbuto(cereal) mwasabye ari nyinshi ingano yibyo mwasabye yagabanijwe kuva ku biro (".$cq_untouch.") kg(s) kugera ku biro (".$c_quantity." kgs) Bitewe n'ingano(quantity) nkeya y'ibisigaye mu bubiko bw'izi mbuto, Murakoze!");
+                    $url = "https://www.intouchsms.co.rw/api/sendsms/.json";
+                    $data = http_build_query ($data);
+                    $username="benii";
+                    $password="Ben@1234";
+                    $ch = curl_init();
+                    curl_setopt($ch,CURLOPT_URL, $url);
+                    curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
+                    curl_setopt($ch,CURLOPT_POST,true);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
+                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+                    curl_setopt($ch,CURLOPT_POSTFIELDS, $data);
+                    $result = curl_exec($ch);
+                    $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                    curl_close($ch);
+
+                } else {
+                    // Do nothing; Means No modification's done on quantity
+                }
 
                 return redirect()->to('cereal/requests')->with('success', 'Approval is successful!');
             }

@@ -61,7 +61,33 @@ class UserController extends BaseController {
     public function enable($id = null) {
         $userModel = new userModel();
         $data = ['status'   => '1'];
-        $userModel->update($id, $data); 
+        $userModel->update($id, $data);
+
+        // SMS API Integration @gadrawingz
+        $singleUser = $userModel->where('farmer_id', $id)->first();
+        $fullName   = $singleUser['firstname']." ".$singleUser['lastname'];
+
+        $data = array(
+            "sender"=>'KIGALIGAS',
+            "recipients"=>$singleUser['telephone'],
+            "message"=>"CEREAL MIS: Muraho, (".$fullName."), Ubusabe bwa konti yanyu bwemewe ubu mwemerewe kwinjira kuri system, Murakoze!");
+
+        $url = "https://www.intouchsms.co.rw/api/sendsms/.json";
+        $data = http_build_query ($data);
+        $username="benii"; 
+        $password="Ben@1234";
+        $ch = curl_init();
+        curl_setopt($ch,CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
+        curl_setopt($ch,CURLOPT_POST,true);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($ch,CURLOPT_POSTFIELDS, $data);
+        $result = curl_exec($ch);
+        $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+ 
+
         return $this->response->redirect(site_url('farmer/active'));
     }
 

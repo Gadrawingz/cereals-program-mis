@@ -10,9 +10,11 @@
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">
-                                                <?= esc($breadcrumb) ?>
-                                            </a></li>
+                                            <li class="breadcrumb-item">
+                                                <a href="#" class="breadcrumb-link">
+                                                <?= esc($breadcrumb) ?> 
+                                                </a>
+                                            </li>
                                             <li class="breadcrumb-item active" aria-current="page">
                                                 <?= esc($page_title) ?>
                                             </li>
@@ -60,8 +62,7 @@
                                         
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
                                             <label for="cereal_type">Cereal Type</label>
-                                            <input type="text" class="form-control" id="" value="<?php echo $cereal['cereal_type'] ?>" disabled
-                                            >
+                                            <input type="text" class="form-control" id="" value="<?php echo $cereal['cereal_type'] ?>" disabled>
                                         </div>
                                     </div>
 
@@ -73,9 +74,14 @@
                                         </div>
                                         
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
-                                            <label for="quantity">Cereal Quantity</label>
+                                            <label for="c_quantity">Cereal Quantity (kg</label>
+
+                                            <input type="hidden" value="<?php echo $app['quantity']?>" name="c_quantity_untouch">
                
-                                            <input type="text" class="form-control" id="" value="<?php echo $app['quantity'] ?> kg(s)" readonly>
+                                            <input type="number" class="form-control" id="c_quantity" value="<?php echo isset($app['quantity'])?set_value('c_quantity'):$app['quantity']; ?>" name="c_quantity">
+                                            <div class="errorful">
+                                                <?= isset($validation) ? displayError($validation, 'c_quantity') : '' ?>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -83,7 +89,10 @@
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
                                             <label for="f_quantity">Fertilizer quantity allowed in <b>Kgs</b></label>
                
-                                            <input type="number" class="form-control" id="" value="2" name="f_quantity">
+                                            <input type="number" class="form-control" id="" value="<?= set_value('f_quantity') ?>" name="f_quantity">
+                                            <div class="errorful">
+                                                <?= isset($validation) ? displayError($validation, 'f_quantity') : '' ?>
+                                            </div>
                                         </div>
 
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-2">
