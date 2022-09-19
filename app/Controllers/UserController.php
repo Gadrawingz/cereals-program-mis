@@ -9,8 +9,10 @@ use App\Libraries\Hashing;
 class UserController extends BaseController {
     // Coding hand :https://github.com/Gadrawingz
 
+    protected $db;
     public function __construct() {
         helper(['url', 'form']);
+        $this->db = \Config\Database::connect();
     }
 
     public function index() {
@@ -19,7 +21,9 @@ class UserController extends BaseController {
 
         $activeAdminId= session()->get('activeAdmin');
         $adminData    = $adminModel->find($activeAdminId);
-        $farmerFetch  = $userModel->where('status', 1)->orderBy('created_at', 'DESC')->findAll();
+        //$farmerFetch  = $userModel->where('status', 1)->orderBy('created_at', 'DESC')->findAll();
+
+        $farmerFetch   = $this->db->table('farmer fa')->select('fa.farmer_id, fa.firstname, fa.lastname, fa.province, pr.province_name AS province, di.district_name AS district, fa.sector, fa.cell, fa.village, fa.gender, fa.telephone, fa.password, fa.status')->join('district di', 'di.district_id=fa.district', 'left')->join('province pr', 'pr.province_id=fa.province', 'left')->where(['fa.status'=>1])->orderBy('fa.created_at', 'DESC')->get()->getResultArray();
 
         $data = [
             'page_title' => 'View active farmers',
@@ -42,7 +46,8 @@ class UserController extends BaseController {
 
         $activeAdminId= session()->get('activeAdmin');
         $adminData    = $adminModel->find($activeAdminId);
-        $farmerFetch  = $userModel->where('status', 0)->orderBy('created_at', 'DESC')->findAll();
+
+        $farmerFetch   = $this->db->table('farmer fa')->select('fa.farmer_id, fa.firstname, fa.lastname, fa.province, pr.province_name AS province, di.district_name AS district, fa.sector, fa.cell, fa.village, fa.gender, fa.telephone, fa.password, fa.status')->join('district di', 'di.district_id=fa.district', 'left')->join('province pr', 'pr.province_id=fa.province', 'left')->where(['fa.status'=>0])->orderBy('fa.created_at', 'DESC')->get()->getResultArray();
 
         $data = [
             'page_title' => 'View inactive farmers',

@@ -8,6 +8,15 @@
                     <!-- ============================================================== -->
                     <!-- bar chart  -->
                     <!-- ============================================================== -->
+                    <?php
+                    if($dataStats):
+                        foreach($dataStats as $data):
+                            $month[]  = $data['month_name'];
+                            $amount[] = $data['amount'];
+                        endforeach;
+                    endif;
+                    ?>
+
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card">
                             <!-- <h4 class="card-header text-center">Statistics</h4> -->

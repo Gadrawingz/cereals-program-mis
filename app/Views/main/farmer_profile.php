@@ -85,8 +85,8 @@
                                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                                                 <div class="card">
                                                     <div class="card-body">
-                                                        <h4 class="mb-1">Province/District</h4>
-                                                        <p><?= $userData['province'] ?> / <?= $userData['district'] ?></p>
+                                                        <h4 class="mb-1">District</h4>
+                                                        <p><?= $districts['district_name'] ?></p>
                                                     </div>
                                                 </div>
                                             </div>

@@ -36,13 +36,13 @@
                                                     <tr class="border-0">
                                                         <th>N<sup>o</sup></th>
                                                         <th>Cereal Name/Type </th>
-                                                        <th>Season </th>
+                                                        <th>Farmer Names </th>
                                                         <th>Quantity/Price</th>
                                                         <th>Total Price</th>
-                                                        <th>Harvest Result</th>
+                                                        <th>Season/Result</th>
                                                         <th>Status </th>
                                                         <th>Date </th>
-                                                        <th class="text-center">Action</th>
+                                                        <th class="text-center">#</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -57,13 +57,17 @@
                                                             <?php echo $hv->cereal_type."<br>(".$hv->cereal_name; ?>)
                                                         </td>
 
-                                                        <td><?php echo $hv->hseason; ?> </td>
+                                                        <td>
+                                                            <?php echo $hv->firstname." ".$hv->lastname; ?><br>
+                                                            (<?php echo $hv->district_name ?>)
+                                                            
+                                                        </td>
 
                                                         <td>
                                                             <?php echo $hv->hquantity; ?> kgs<br>(<?php echo $hv->current_price." rwf";?>)
                                                         </td>
                                                         <td><?php echo $hv->hquantity * $hv->current_price; ?> rwf </td>
-                                                        <td><?php echo $hv->result; ?> </td>
+                                                        <td><?php echo $hv->hseason."/ ".$hv->result; ?> </td>
                                                         <td><span class="badge-dot badge-<?php echo $hv->harvestatus==1?"success":"danger";?> mr-1"></span>
                                                             <?php 
                                                             echo $hv->harvestatus == 1?"Approved":"Pending";?>

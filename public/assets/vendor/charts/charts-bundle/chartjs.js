@@ -67,20 +67,31 @@
                 var myChart = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: ["M", "T", "W", "R", "F", "S", "S"],
+                        labels: ["June", "July", "Aug", "Sept"],
+                        //labels: labels,
                         datasets: [{
-                            label: 'Almonds',
-                            data: [12, 19, 3, 17, 28, 24, 7],
-                           backgroundColor: "rgba(89, 105, 255,0.5)",
-                                    borderColor: "rgba(89, 105, 255,0.7)",
-                            borderWidth: 2
-                        }, {
-                            label: 'Cashew',
-                            data: [30, 29, 5, 5, 20, 3, 10],
-                           backgroundColor: "rgba(255, 64, 123,0.5)",
-                                    borderColor: "rgba(255, 64, 123,0.7)",
-                            borderWidth: 2
-                        }]
+                            label: 'First dataset',
+                            data: [12, 33, 24, '<?php echo json_encode($month) ?>'],
+                            backgroundColor: [
+                                'red',
+                                'green',
+                                'violet',
+                                'pink',
+                                'darkblue',
+                                'magenta',
+                                'black'
+                            ],
+                            borderColor: [
+                                'red',
+                                'green',
+                                'violet',
+                                'pink',
+                                'darkblue',
+                                'magenta',
+                                'black'
+                            ],
+                            borderWidth: 2,
+                        }],
                     },
                     options: {
                         scales: {

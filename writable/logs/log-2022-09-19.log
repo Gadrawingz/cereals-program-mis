@@ -1,0 +1,585 @@
+ERROR - 2022-09-19 01:48:31 --> Unknown column 'ad.ad.status' in 'field list'
+CRITICAL - 2022-09-19 01:48:31 --> Unknown column 'ad.ad.status' in 'field list'
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `ad`.`ad...', 0)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ad`.`ad...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ad`.`ad...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `ad`.`ad...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(179): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminViewAll()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 01:50:13 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/view_admi...', Array, true)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(192): view('pages/view_admi...', Array)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminViewAll()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-09-19 02:17:55 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/view_admi...', Array, true)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AdminController.php(192): view('pages/view_admi...', Array)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AdminController->adminViewAll()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-09-19 02:18:08 --> syntax error, unexpected token "(array)"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-09-19 02:49:22 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(147): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminProfile()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 02:49:45 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(147): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminProfile()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 02:51:22 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(147): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminProfile()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 02:53:08 --> Attempt to read property "firstname" on array
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(147): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminProfile()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 02:56:20 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(147): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminProfile()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 02:56:36 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(147): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminProfile()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 03:01:10 --> Undefined array key "created_at"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\main\admin_profile.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_prof...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(148): view('main/admin_prof...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminProfile()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 03:01:56 --> Undefined array key "created_at"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\main\admin_profile.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_prof...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(148): view('main/admin_prof...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminProfile()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 03:03:23 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(148): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminProfile()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 03:16:23 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(148): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminProfile()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 03:23:04 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(152): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminProfile()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 03:23:40 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(152): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminProfile()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 03:26:05 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(152): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminProfile()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 03:27:34 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\template\navbar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('template/navbar', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(152): view('template/navbar', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminProfile()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-09-19 04:12:15 --> Unknown column 'fa.admin_id' in 'field list'
+CRITICAL - 2022-09-19 04:12:15 --> Unknown column 'fa.admin_id' in 'field list'
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `fa`.`ad...', 0)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fa`.`ad...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fa`.`ad...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `fa`.`ad...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\UserController.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\UserController->index()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-09-19 04:12:31 --> Unknown column 'fa.admin_id' in 'field list'
+CRITICAL - 2022-09-19 04:12:31 --> Unknown column 'fa.admin_id' in 'field list'
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `fa`.`ad...', 0)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fa`.`ad...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fa`.`ad...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `fa`.`ad...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\UserController.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\UserController->index()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-09-19 04:14:29 --> Unknown column 'di.province' in 'on clause'
+CRITICAL - 2022-09-19 04:14:29 --> Unknown column 'di.province' in 'on clause'
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `fa`.`fa...', 0)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fa`.`fa...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fa`.`fa...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `fa`.`fa...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\UserController.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\UserController->index()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 04:20:47 --> Undefined array key "district"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\main\admin_profile.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 90)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('main/admin_prof...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\DashController.php(152): view('main/admin_prof...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\DashController->adminProfile()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 04:33:19 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 147)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-19 04:36:40 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 147)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-19 04:39:39 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 147)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-19 04:40:03 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 147)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-19 04:40:46 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 147)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-19 04:41:29 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 147)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-19 04:41:48 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 147)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-19 04:42:01 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\AuthController.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 147)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\AuthController->saveFarmer()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-19 05:14:37 --> syntax error, unexpected token "->", expecting identifier or variable or "{" or "$"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-09-19 05:19:37 --> Undefined variable $distModel
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\HarvestController.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 192)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\HarvestController->harvestsChecked()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HarvestController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-19 05:20:08 --> Class "App\Controllers\DistrictModel" not found
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\HarvestController->harvestsChecked()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HarvestController))
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-19 05:21:05 --> syntax error, unexpected identifier "district_name", expecting "]"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-09-19 05:23:18 --> Undefined variable $activeDistId
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\HarvestController.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 166)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\HarvestController->harvestsUnchecked()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HarvestController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-19 05:23:18 --> Undefined variable $activeDistId
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\HarvestController.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 166)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\HarvestController->harvestsUnchecked()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HarvestController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-19 05:23:18 --> Undefined variable $activeDistId
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\HarvestController.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 166)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\HarvestController->harvestsUnchecked()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HarvestController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-19 05:37:52 --> Undefined property: stdClass::$season
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\pages\view_harvests_c.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 66)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/view_harv...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\HarvestController.php(210): view('pages/view_harv...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\HarvestController->harvestsChecked()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HarvestController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 06:20:23 --> Undefined property: stdClass::$district_name
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\pages\report_full_agro.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 44)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/report_fu...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(224): view('pages/report_fu...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->viewAgroFullReport()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 06:21:18 --> Undefined property: stdClass::$district
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\pages\report_full_agro.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 44)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/report_fu...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(224): view('pages/report_fu...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->viewAgroFullReport()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 06:21:50 --> Undefined property: stdClass::$district
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\pages\report_full_agro.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 44)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/report_fu...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(224): view('pages/report_fu...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->viewAgroFullReport()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 06:23:01 --> Undefined property: stdClass::$district
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\pages\report_full_agro.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 44)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/report_fu...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(224): view('pages/report_fu...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->viewAgroFullReport()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 06:24:11 --> Undefined property: stdClass::$district
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\pages\report_full_agro.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 44)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/report_fu...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(224): view('pages/report_fu...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->viewAgroFullReport()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 07:00:00 --> Undefined array key "harvest_repo"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\pages\report_full_agro.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 28)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/report_fu...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(224): view('pages/report_fu...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->viewAgroFullReport()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 07:00:27 --> Undefined array key "harvest_repo"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\pages\report_full_agro.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 28)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/report_fu...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(224): view('pages/report_fu...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->viewAgroFullReport()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 07:00:52 --> syntax error, unexpected string content "", expecting "-" or identifier or variable or number
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/report_fu...', Array, true)
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(224): view('pages/report_fu...', Array)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->viewAgroFullReport()
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-09-19 07:01:19 --> Undefined array key "harvest_repo"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\pages\report_full_agro.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 28)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/report_fu...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(224): view('pages/report_fu...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->viewAgroFullReport()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 07:02:37 --> Undefined constant "harvest_repo"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/report_fu...', Array, true)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(224): view('pages/report_fu...', Array)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->viewAgroFullReport()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-09-19 07:03:13 --> Undefined array key "harvest_repo"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\pages\report_full_agro.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 28)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/report_fu...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(224): view('pages/report_fu...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->viewAgroFullReport()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 07:03:34 --> Undefined array key "harvest_repo"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Views\pages\report_full_agro.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 28)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Common.php(1089): CodeIgniter\View\View->render('pages/report_fu...', Array, true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(224): view('pages/report_fu...', Array)
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->viewAgroFullReport()
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 07:05:26 --> Class "App\Controllers\DistrictModel" not found
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->fullRepoHarvest('30')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-19 07:06:23 --> Undefined property: App\Controllers\ReportController::$table
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(313): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 313)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->fullRepoHarvest('30')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-09-19 07:07:11 --> Not unique table/alias: 'c'
+CRITICAL - 2022-09-19 07:07:11 --> Not unique table/alias: 'c'
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `c`.`cer...', 0)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `c`.`cer...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `c`.`cer...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `c`.`cer...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(313): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->fullRepoHarvest('30')
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-09-19 07:07:57 --> Not unique table/alias: 'c'
+CRITICAL - 2022-09-19 07:07:57 --> Not unique table/alias: 'c'
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `c`.`cer...', 0)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `c`.`cer...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `c`.`cer...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `c`.`cer...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(313): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->fullRepoHarvest('21')
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-09-19 07:08:17 --> Unknown column 'h.harvest_id' in 'field list'
+CRITICAL - 2022-09-19 07:08:17 --> Unknown column 'h.harvest_id' in 'field list'
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `c`.`cer...', 0)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `c`.`cer...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `c`.`cer...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `c`.`cer...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(313): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->fullRepoHarvest('21')
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-19 07:08:30 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(318): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 318)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->fullRepoHarvest('21')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-19 07:23:38 --> syntax error, unexpected variable "$id", expecting ")"
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-09-19 07:46:43 --> Undefined property: App\Controllers\ReportController::$table
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(345): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 345)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->fullRepoCereal('21')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-09-19 07:48:02 --> Not unique table/alias: 'c'
+CRITICAL - 2022-09-19 07:48:02 --> Not unique table/alias: 'c'
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `c`.`cer...', 0)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `c`.`cer...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `c`.`cer...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `c`.`cer...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(345): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->fullRepoCereal('21')
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-09-19 08:00:23 --> Table 'cereal_mis.deposit' doesn't exist
+CRITICAL - 2022-09-19 08:00:23 --> Table 'cereal_mis.deposit' doesn't exist
+#0 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTHNAM...', 0)
+#1 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTHNAM...')
+#2 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTHNAM...')
+#3 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\app\Controllers\ReportController.php(235): CodeIgniter\Database\BaseConnection->query('SELECT MONTHNAM...')
+#4 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(832): App\Controllers\ReportController->viewFullStats()
+#5 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#6 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter\CI4\cereal-program-mis\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}

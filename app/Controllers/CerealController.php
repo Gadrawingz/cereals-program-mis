@@ -8,6 +8,7 @@ use App\Models\UserModel;
 use App\Models\FFarmerModel;
 use App\Models\FertilizerModel;
 use App\Models\ApplicationModel;
+use App\Models\DistrictModel;
 
 class CerealController extends BaseController {
     // Coding hand :https://github.com/Gadrawingz
@@ -407,7 +408,6 @@ class CerealController extends BaseController {
 
 
     public function cerealAllApplied() {
-
         $appModel  = new ApplicationModel();
         $userModel = new UserModel();
 
@@ -436,14 +436,19 @@ class CerealController extends BaseController {
 
         $appModel   = new ApplicationModel();
         $adminModel = new AdminModel();
+        $distModel     = new DistrictModel();
 
         $activeAdminId = session()->get('activeAdmin');
+        $activeDistId  = session()->get('activeDist');
+
         $adminData    = $adminModel->find($activeAdminId);
 
-        $viewCereals  = $this->db->table($this->table)->select('c.cereal_name, c.cereal_type, c.land_type, app.app_id, app.farmer_id, app.cereal_id, app.quantity, app.season, app.status AS appstatus, app.app_date, f.firstname, f.lastname, f.telephone')->join('cereal c', 'c.cereal_id=app.cereal_id', 'left')->join('farmer f', 'f.farmer_id=app.farmer_id', 'left')->orderBy('app.app_date', 'DESC')->get()->getResult();
+        $viewCereals  = $this->db->table($this->table)->select('c.cereal_name, c.cereal_type, c.land_type, app.app_id, app.farmer_id, app.cereal_id, app.quantity, app.season, app.status AS appstatus, app.app_date, f.firstname, f.lastname, f.telephone, d.district_name')->join('cereal c', 'c.cereal_id=app.cereal_id', 'left')->join('farmer f', 'f.farmer_id=app.farmer_id', 'left')->join('district d', 'd.district_id=f.district', 'left')->where(["f.district"=> $activeDistId])->orderBy('app.app_date', 'DESC')->get()->getResult();
+
+        $singleDist = $distModel->where('district_id', $activeDistId)->first();
 
         $data = [
-            'page_title' => 'All cereals requests from farmers',
+            'page_title' => 'All cereals requests in ('.$singleDist['district_name'].')',
             'breadcrumb' => 'Application',
             'adminData'  => $adminData,
             'cereals'    => $viewCereals,

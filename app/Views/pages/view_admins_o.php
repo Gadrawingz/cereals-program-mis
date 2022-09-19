@@ -40,10 +40,10 @@
                                                         <th class="border-0">N<sup>o</sup></th>
                                                         <th class="border-0">Admin Names </th>
                                                         <th class="border-0">Gender </th>
+                                                        <th class="border-0">District/Cell</th>
                                                         <th class="border-0">Telephone</th>
-                                                        <th class="border-0">Admin Role</th>
                                                         <th class="border-0">Admin Status</th>
-                                                        <th colspan="2" class="text-center">Action&nbsp;&nbsp;</th>
+                                                        <th colspan="2" class="text-center">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -55,8 +55,14 @@
                                                         <td><?php echo $n; ?></td>
                                                         <td><?php echo $admin['firstname']." ".$admin['lastname']; ?> </td>
                                                         <td><?php echo $admin['gender']; ?> </td>
+
+                                                        <td>
+                                                            <p data-toggle="tooltip"style="width: 100%; text-align: left;" data-placement="right" title="Cell: <?php echo $admin['cell']; ?>">
+                                                                <?php echo $admin['district_name']; ?>/<?php echo $admin['sector']; ?>
+                                                            </p>
+                                                        </td>
+
                                                         <td><?php echo $admin['telephone']; ?> </td>
-                                                        <td><?php echo $admin['admin_role']; ?></td>
                                                         <td><span class="badge-dot badge-brand mr-1"></span>
                                                             <?php 
                                                             echo $admin['status'] == '1'?"Active":"Inactive"; 

@@ -146,11 +146,11 @@ class AuthController extends BaseController {
                 'province'  => $singleProv['province_id'],
                 'district'  => $singleDist['district_id'],
                 'sector'    => $sector,
-                'cell'    => $cell,
-                'village'    => $village,
+                'cell'      => $cell,
+                'village'   => $village,
                 'gender'    => $gender,
-                'telephone'    => $telephone,
-                'password'    => Hashing::make($password),
+                'telephone' => $telephone,
+                'password'  => Hashing::make($password),
             ];
 
             $query = $userModel->insert($values);

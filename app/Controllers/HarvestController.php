@@ -5,6 +5,7 @@ use App\Models\AdminModel;
 use App\Models\UserModel;
 use App\Models\HarvestModel;
 use App\Models\CerealModel;
+use App\Models\DistrictModel;
 
 
 class HarvestController extends BaseController {
@@ -157,14 +158,18 @@ class HarvestController extends BaseController {
         $adminModel    = new AdminModel();
         $harvestModel  = new HarvestModel();
         $cerealModel   = new CerealModel();
+        $distModel     = new DistrictModel();
 
         $activeAdminId = session()->get('activeAdmin');
+        $activeDistId  = session()->get('activeDist');
         $adminData     = $adminModel->find($activeAdminId);
 
-        $viewHarvests  = $this->db->table($this->table)->select('c.cereal_name, c.cereal_type, c.land_type, h.harvest_id, h.quantity AS hquantity, h.season AS hseason, h.current_price, h.outcome AS result, h.status AS harvestatus, h.harvest_date')->join('cereal c', 'c.cereal_id=h.cereal_id', 'left')->where(["h.status" => 0])->orderBy('h.harvest_date', 'DESC')->get()->getResult();
+        $viewHarvests  = $this->db->table($this->table)->select('c.cereal_name, c.cereal_type, c.land_type, f.firstname, f.lastname, d.district_name, h.harvest_id, h.quantity AS hquantity, h.season AS hseason, h.current_price, h.outcome AS result, h.status AS harvestatus, h.harvest_date')->join('cereal c', 'c.cereal_id=h.cereal_id', 'left')->join('farmer f', 'f.farmer_id=h.farmer_id', 'left')->join('district d', 'd.district_id=f.district', 'left')->where(["h.status" => 0, "f.district"=> $activeDistId])->orderBy('h.harvest_date', 'DESC')->get()->getResult();
+
+        $singleDist = $distModel->where('district_id', $activeDistId)->first();
 
         $data = [
-            'page_title' => 'All pending harvests',
+            'page_title' => 'All pending harvests ('.$singleDist['district_name'].')',
             'breadcrumb' => 'Harvest',
             'adminData'  => $adminData,
             'harvests'   => $viewHarvests,
@@ -182,14 +187,18 @@ class HarvestController extends BaseController {
         $adminModel    = new AdminModel();
         $harvestModel  = new HarvestModel();
         $cerealModel   = new CerealModel();
+        $distModel     = new DistrictModel();
 
         $activeAdminId = session()->get('activeAdmin');
+        $activeDistId = session()->get('activeDist');
         $adminData     = $adminModel->find($activeAdminId);
 
-        $viewHarvests  = $this->db->table($this->table)->select('c.cereal_name, c.cereal_type, c.land_type, h.harvest_id, h.quantity AS hquantity, h.season AS hseason, h.current_price, h.outcome AS result, h.status AS harvestatus, h.harvest_date')->join('cereal c', 'c.cereal_id=h.cereal_id', 'left')->where(["h.status" => 1])->orderBy('h.harvest_date', 'DESC')->get()->getResult();
+        $viewHarvests  = $this->db->table($this->table)->select('c.cereal_name, c.cereal_type, c.land_type, f.firstname, f.lastname, d.district_name, h.harvest_id, h.quantity AS hquantity, h.season AS hseason, h.current_price, h.outcome AS result, h.status AS harvestatus, h.harvest_date')->join('cereal c', 'c.cereal_id=h.cereal_id', 'left')->join('farmer f', 'f.farmer_id=h.farmer_id', 'left')->join('district d', 'd.district_id=f.district', 'left')->where(["h.status" => 1, "f.district"=> $activeDistId])->orderBy('h.harvest_date', 'DESC')->get()->getResult();
+
+        $singleDist = $distModel->where('district_id', $activeDistId)->first();
 
         $data = [
-            'page_title' => 'All approved harvests',
+            'page_title' => 'All approved harvests ('.$singleDist['district_name'].')',
             'breadcrumb' => 'Harvest',
             'adminData'  => $adminData,
             'harvests'   => $viewHarvests,

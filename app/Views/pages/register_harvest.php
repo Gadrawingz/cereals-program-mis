@@ -125,7 +125,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button class="btn btn-primary" type="submit" name="register">Register</button>
+                                            <button class="btn btn-primary" onclick="return confirm('Please review data before submission because you cannot edit it once it is submitted, if yes press okay')" type="submit" name="register">Register</button>
                                         </form>
                                     </div>
                                 </div>

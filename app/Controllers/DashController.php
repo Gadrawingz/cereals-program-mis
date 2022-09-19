@@ -11,8 +11,9 @@ use App\Models\ApplicationModel;
 class DashController extends BaseController {
     // Coding hand :https://github.com/Gadrawingz
 
+    protected $db;
     public function __construct() {
-        helper(['url', 'form']);
+        $this->db = \Config\Database::connect();
     }
 
     public function farmerDashboard() {
@@ -60,12 +61,17 @@ class DashController extends BaseController {
     public function farmerProfile() {
 
         $userModel = new  \App\Models\UserModel();
+        $distModel  = new  \App\Models\DistrictModel();
+
         $activeUserId= session()->get('activeUser');
         $userData = $userModel->find($activeUserId);
+
+        $districts = $distModel->find($userData['district']);
 
         $data = [
             'page_title' => 'Farmer Profile',
             'userData'=> $userData,
+            'districts'=> $districts,
         ];
 
         return 
@@ -133,12 +139,17 @@ class DashController extends BaseController {
     public function adminProfile() {
 
         $adminModel = new  \App\Models\AdminModel();
+        $distModel  = new  \App\Models\DistrictModel();
+        
         $activeAdminId= session()->get('activeAdmin');
         $adminData = $adminModel->find($activeAdminId);
 
+        $districts = $distModel->find($adminData['district']);
+        
         $data = [
             'page_title' => 'Admin Profile',
-            'adminData'=> $adminData
+            'adminData'=> $adminData,
+            'districts'=> $districts,
         ];
 
         return 

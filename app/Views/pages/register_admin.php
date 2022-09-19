@@ -145,7 +145,6 @@
                                             <select name="admin_role" class="form-control" id="admin_role">
                                                 <option value="<?= set_value('admin_role') ?>">Select Role</option>
                                                 <option value="Agrodealer">Agrodealer</option>
-                                                <option value="Admin">Administrator</option>
                                             </select>
                                             <div class="errorful">
                                                 <?= isset($validation) ? displayError($validation, 'admin_role') : '' ?>

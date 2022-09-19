@@ -57,7 +57,8 @@
                                                             <span class="text-primary"><?php echo $cr->cereal_type; ?></span>
                                                         </td>
                                                         <td>
-                                                            <?php echo "by: ".$cr->firstname; ?>
+                                                            <?php echo "by: ".$cr->firstname." ".$cr->lastname; ?><br>
+                                                            (<?php echo $cr->district_name; ?>)
                                                         </td>
                                                         <td><?php echo $cr->quantity; ?> kg(s) </td>
                                                         <td><?php echo $cr->season; ?> </td>

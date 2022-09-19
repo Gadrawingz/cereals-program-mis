@@ -174,10 +174,12 @@ class AdminController extends BaseController {
 
         $activeAdminId= session()->get('activeAdmin');
         $adminData    = $adminModel->find($activeAdminId);
-        $adminFetch   = $adminModel->where('status', 1)->orderBy('created_at', 'DESC')->findAll();
+        // $adminFetch   = $adminModel->where(['status'=>1, "admin_role"=> "Agrodealer"])->orderBy('created_at', 'DESC')->findAll();
+
+        $adminFetch   = $this->db->table('admin ad')->select('ad.admin_id, ad.firstname, ad.lastname, ad.province, di.district_name, ad.sector, ad.cell, ad.village, ad.gender, ad.telephone, ad.password, ad.admin_role, ad.status')->join('district di', 'di.district_id=ad.district', 'left')->where(['ad.status'=>1, "ad.admin_role"=> "Agrodealer"])->orderBy('ad.created_at', 'DESC')->get()->getResultArray();
 
         $data = [
-            'page_title' => 'View all admins',
+            'page_title' => 'View all Agrodealers',
             'breadcrumb' => 'Admin',
             'adminData'  => $adminData,
             'admins'     => $adminFetch,
@@ -195,7 +197,8 @@ class AdminController extends BaseController {
 
         $activeAdminId= session()->get('activeAdmin');
         $adminData    = $adminModel->find($activeAdminId);
-        $adminFetch   = $adminModel->where('status', 0)->orderBy('created_at', 'DESC')->findAll();
+        
+        $adminFetch   = $this->db->table('admin ad')->select('ad.admin_id, ad.firstname, ad.lastname, ad.province, di.district_name, ad.sector, ad.cell, ad.village, ad.gender, ad.telephone, ad.password, ad.admin_role, ad.status')->join('district di', 'di.district_id=ad.district', 'left')->where(['ad.status'=>0, "ad.admin_id"=> $activeAdminId])->orderBy('ad.created_at', 'DESC')->get()->getResultArray();
 
         $data = [
             'page_title' => 'View disabled admins',

@@ -1,5 +1,4 @@
 <?php
-
 namespace Config;
 
 // Create a new instance of our RouteCollection class.
@@ -16,6 +15,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * Router Setup
  * --------------------------------------------------------------------
  */
+
 $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('HomeController');
 $routes->setDefaultMethod('index');
@@ -110,7 +110,10 @@ $routes->group('report', ['filter'=>'adminAuth'], function ($routes){
     $routes->get('agros', 'ReportController::viewAgroReport');
     $routes->get('full-agro', 'ReportController::viewAgroFullReport');
     $routes->get('view-stats', 'ReportController::viewFullStats');
-    $routes->get('agro/(:num)', 'ReportController::xxxx/$1');
+    $routes->post('find-harvest', 'ReportController::findHReport');
+    $routes->post('find-cereal',  'ReportController::findCReport');
+    $routes->get('harvest/(:num)', 'ReportController::fullRepoHarvest/$1');
+    $routes->get('cereal/(:num)', 'ReportController::fullRepoCereal/$1');
 });
 
 $routes->get('cereal/apply', 'CerealController::cerealApplication', ['filter'=>'farmerAuth']);
