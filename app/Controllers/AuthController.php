@@ -158,7 +158,7 @@ class AuthController extends BaseController {
             if(!$query) {
                 return redirect()->back()->with('fail', 'Something went wrong!');
             } else {
-                return redirect()->to('farmer/register')->with('success', 'Registration is successful!', );
+                return $this->response->redirect(site_url('farmer/login'));
             }
         }
     }

@@ -68,9 +68,14 @@
                                                             echo $admin['status'] == '1'?"Active":"Inactive"; 
                                                             ?>
                                                         </td>
+
+                                                        <?php
+                                                        if($adminData['admin_id']!=$admin['admin_id']) {
+                                                        ?>
                                                         <td class="text-center">
                                                             <a class="btn btn-sm btn-danger" href="<?= site_url('admin/disable/'.$admin['admin_id']) ?>" onclick="return confirm('Do you want to disable this row?')">Disable</a>
                                                         </td>
+                                                        <?php } ?>
                                                     </tr>
                                                     <?php $n++; endforeach; ?>
                                                 <?php endif; ?>

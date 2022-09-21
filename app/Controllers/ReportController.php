@@ -152,6 +152,7 @@ class ReportController extends BaseController {
         view('template/sidebar', $data).
         view('pages/report_agros', $data).
         view('template/footer', $data);
+        // https://github.com/Gadrawingz
     }
 
     public function viewAgroFullReport() {
@@ -232,7 +233,7 @@ class ReportController extends BaseController {
         $activeAdminId= session()->get('activeAdmin');
         $adminData = $adminModel->find($activeAdminId);
 
-        $dataStats  = $this->db->query("SELECT MONTHNAME(app_date) AS month_name, SUM(quantity) as amount FROM application GROUP BY month_name")->getResultArray();
+        $dataStats  = $this->db->query("SELECT MONTHNAME(app_date) AS month_name, COUNT(farmer_id) as requests FROM application GROUP BY month_name")->getResultArray();
 
         $data = [
             'page_title' => 'Statistics Using Bar Chart',
@@ -263,6 +264,7 @@ class ReportController extends BaseController {
     }
 
     public function fullRepoHarvest($id = null) {
+        // https://github.com/Gadrawingz
         $adminModel    = new AdminModel();
         $harvestModel  = new HarvestModel();
         $cerealModel   = new CerealModel();
@@ -289,6 +291,7 @@ class ReportController extends BaseController {
     }
 
     public function fullRepoCereal($id = null) {
+        // https://github.com/Gadrawingz
         $appModel      = new ApplicationModel();
         $adminModel    = new AdminModel();
         $cerealModel   = new CerealModel();

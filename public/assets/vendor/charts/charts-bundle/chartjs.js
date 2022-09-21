@@ -67,11 +67,11 @@
                 var myChart = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: ["June", "July", "Aug", "Sept"],
+                        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
                         //labels: labels,
                         datasets: [{
-                            label: 'First dataset',
-                            data: [12, 33, 24, '<?php echo json_encode($month) ?>'],
+                            label: 'Cereal dataset',
+                            data: [3, 8, 5, 11, 14, 7],
                             backgroundColor: [
                                 'red',
                                 'green',
