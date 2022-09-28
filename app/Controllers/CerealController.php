@@ -609,7 +609,7 @@ class CerealController extends BaseController {
                 $url = "https://www.intouchsms.co.rw/api/sendsms/.json";
                 $data = http_build_query ($data);
                 $username="benii"; 
-                $password="Ben@1234";
+                $password="SMS@123";
                 $ch = curl_init();
                 curl_setopt($ch,CURLOPT_URL, $url);
                 curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
@@ -673,7 +673,7 @@ class CerealController extends BaseController {
                     $url = "https://www.intouchsms.co.rw/api/sendsms/.json";
                     $data = http_build_query ($data);
                     $username="benii";
-                    $password="Ben@1234";
+                    $password="SMS@123";
                     $ch = curl_init();
                     curl_setopt($ch,CURLOPT_URL, $url);
                     curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
